@@ -1,80 +1,1176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>F208 FRH — XR2 History</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
-    header {
-      background-color: #c00;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    .hero {
-      width: 100%;
-      max-height: 600px;
-      object-fit: cover;
-      display: block;
-    }
-    .content {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .section-title {
-      font-size: 1.8rem;
-      border-bottom: 2px solid #c00;
-      padding-bottom: 0.5rem;
-      margin-top: 2rem;
-    }
-    .image-block {
-      margin: 2rem 0;
-      text-align: center;
-    }
-    .image-block img {
-      max-width: 100%;
-      border: 4px solid #c00;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#050505"
+    >
+
+    <title>F208 FRH | Ford Fiesta XR2</title>
+
+    <meta
+        name="description"
+        content="The documented history of F208 FRH, a 1989 Ford Fiesta XR2."
+    >
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #050505;
+            color: #f5f5f5;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+
+            background: rgba(5, 5, 5, 0.88);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+            z-index: 1000;
+        }
+
+        nav {
+            width: 100%;
+            max-width: 1400px;
+
+            margin: auto;
+            padding: 0 32px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* =========================================================
+           LOGO
+        ========================================================= */
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #d71920;
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 1.4px;
+
+            color: #d0d0d0;
+
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            position: relative;
+
+            height: 100vh;
+            min-height: 620px;
+
+            display: flex;
+            align-items: flex-end;
+
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+
+            transform: scale(1.01);
+        }
+
+        .hero-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.12) 25%,
+                    rgba(0, 0, 0, 0.25) 55%,
+                    rgba(0, 0, 0, 0.92) 100%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+
+            width: 100%;
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding:
+                0
+                32px
+                75px;
+
+            z-index: 2;
+        }
+
+        .hero-small {
+            margin-bottom: 10px;
+
+            color: #e0e0e0;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin: 0;
+
+            max-width: 850px;
+
+            font-size: clamp(
+                48px,
+                8vw,
+                105px
+            );
+
+            line-height: 0.92;
+
+            letter-spacing: -4px;
+
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: #d71920;
+        }
+
+        .hero-registration {
+            margin-top: 18px;
+
+            font-size: 21px;
+            font-weight: 500;
+
+            color: #dddddd;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================================================
+           MAIN PAGE
+        ========================================================= */
+
+        main {
+            overflow: hidden;
+        }
+
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        section {
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding:
+                105px
+                32px;
+        }
+
+        .section-heading {
+            margin-bottom: 45px;
+        }
+
+        .section-kicker {
+            margin-bottom: 9px;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            color: #d71920;
+
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+
+            font-size: clamp(
+                37px,
+                5vw,
+                68px
+            );
+
+            line-height: 1;
+
+            letter-spacing: -2.5px;
+        }
+
+        .section-heading p {
+            max-width: 700px;
+
+            margin:
+                22px
+                0
+                0;
+
+            font-size: 18px;
+            line-height: 1.65;
+
+            color: #a9a9a9;
+        }
+
+
+        /* =========================================================
+           CAR INTRODUCTION
+        ========================================================= */
+
+        .car-section {
+            display: grid;
+
+            grid-template-columns:
+                1.15fr
+                0.85fr;
+
+            gap: 80px;
+
+            align-items: start;
+        }
+
+        .car-description {
+            font-size: 22px;
+
+            line-height: 1.7;
+
+            color: #d2d2d2;
+        }
+
+        .car-description p {
+            margin-top: 0;
+        }
+
+        .details {
+            border-top:
+                1px solid
+                #272727;
+        }
+
+        .detail {
+            display: flex;
+            justify-content: space-between;
+
+            gap: 30px;
+
+            padding:
+                17px
+                0;
+
+            border-bottom:
+                1px solid
+                #272727;
+        }
+
+        .detail-name {
+            color: #858585;
+        }
+
+        .detail-value {
+            text-align: right;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           DIVIDER
+        ========================================================= */
+
+        .divider {
+            max-width: 1400px;
+
+            height: 1px;
+
+            margin: auto;
+
+            background:
+                #1b1b1b;
+        }
+
+
+        /* =========================================================
+           GALLERIES
+        ========================================================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 14px;
+        }
+
+        .gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            background: #111;
+
+            cursor: zoom-in;
+
+            aspect-ratio: 4 / 3;
+        }
+
+        .gallery-item img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.5s ease,
+                opacity 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.035);
+
+            opacity: 0.88;
+        }
+
+        .gallery-item::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.06);
+
+            pointer-events: none;
+        }
+
+
+        /* documents such as invoice / MOT */
+
+        .document-gallery .gallery-item img {
+            object-fit: contain;
+
+            background: #111;
+        }
+
+
+        /* =========================================================
+           LIGHTBOX
+        ========================================================= */
+
+        .lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 70px 20px 30px;
+
+            background:
+                rgba(0, 0, 0, 0.96);
+
+            z-index: 5000;
+
+            cursor: zoom-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 96vw;
+            max-height: 88vh;
+
+            object-fit: contain;
+
+            box-shadow:
+                0 15px 60px
+                rgba(0, 0, 0, 0.65);
+        }
+
+        .lightbox-close {
+            position: absolute;
+
+            top: 20px;
+            right: 28px;
+
+            border: 0;
+
+            background: none;
+
+            color: white;
+
+            font-size: 38px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            padding:
+                70px
+                30px;
+
+            border-top:
+                1px solid
+                #1b1b1b;
+
+            text-align: center;
+
+            color: #707070;
+
+            font-size: 13px;
+        }
+
+        .footer-logo {
+            margin-bottom: 15px;
+
+            color: #fff;
+
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .footer-logo span {
+            color: #d71920;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                height: 64px;
+            }
+
+            nav {
+                padding:
+                    0
+                    18px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+
+                letter-spacing: 1px;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero-content {
+                padding:
+                    0
+                    20px
+                    55px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2.5px;
+            }
+
+            .hero-registration {
+                font-size: 17px;
+            }
+
+            section {
+                padding:
+                    75px
+                    20px;
+            }
+
+            .car-section {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .gallery {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 7px;
+            }
+
+        }
+
+
+        @media (max-width: 520px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 9px;
+            }
+
+            .hero {
+                height: 82vh;
+            }
+
+            .hero h1 {
+                font-size: 53px;
+            }
+
+            .section-heading {
+                margin-bottom: 28px;
+            }
+
+            .section-heading h2 {
+                font-size: 40px;
+            }
+
+            .section-heading p {
+                font-size: 16px;
+            }
+
+            .car-description {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-  <header>
-    <h1>F208 FRH — XR2 Ownership History</h1>
-  </header>
 
-  <img src="hero.jpg" alt="Ford Fiesta XR2 Hero Image" class="hero" />
 
-  <div class="content">
-    <p>This site documents the ownership history, milestones, and memories of F208 FRH — a cherished 1989 Ford Fiesta XR2. From its first registration to the present day, this car's story continues to be celebrated.</p>
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <div class="section-title">Photo Archive</div>
+<header>
 
-    <div class="image-block"><a href="road.JPG" target="_blank"><img src="road.JPG" alt="XR2 on road" /></a></div>
-    <div class="image-block"><a href="invoice.jpeg" target="_blank"><img src="invoice.jpeg" alt="Original invoice" /></a></div>
-    <div class="image-block"><a href="plate.jpg" target="_blank"><img src="plate.jpg" alt="Registration plate" /></a></div>
-    <div class="image-block"><a href="alloys.jpeg" target="_blank"><img src="alloys.jpeg" alt="Alloy wheels" /></a></div>
-    <div class="image-block"><a href="Garage.jpeg" target="_blank"><img src="Garage.jpeg" alt="Garage stored" /></a></div>
-    <div class="image-block"><a href="Brakes.jpg" target="_blank"><img src="Brakes.jpg" alt="Brake service" /></a></div>
-    <div class="image-block"><a href="Parts.jpeg" target="_blank"><img src="Parts.jpeg" alt="Parts stock" /></a></div>
-    <div class="image-block"><a href="Mot.jpeg" target="_blank"><img src="Mot.jpeg" alt="MOT history" /></a></div>
-    <div class="image-block"><a href="Press.jpeg" target="_blank"><img src="Press.jpeg" alt="Magazine feature" /></a></div>
-    <div class="image-block"><a href="Bolt.jpeg" target="_blank"><img src="Bolt.jpeg" alt="Bolt detail" /></a></div>
-    <div class="image-block"><a href="crystal.JPG" target="_blank"><img src="crystal.JPG" alt="Crystal Ford dealership" /></a></div>
-    <div class="image-block"><a href="E151RWX.jpeg" target="_blank"><img src="E151RWX.jpeg" alt="Another XR2" /></a></div>
-    <div class="image-block"><a href="mot.jpg" target="_blank"><img src="mot.jpg" alt="MOT certificate" /></a></div>
-    <div class="image-block"><a href="xrowners.JPG" target="_blank"><img src="xrowners.JPG" alt="Previous owners" /></a></div>
+    <nav>
 
-  </div>
+        <a
+            class="logo"
+            href="#top"
+        >
+            <span>XR</span>2
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="#car">
+                THE CAR
+            </a>
+
+            <a href="#history">
+                HISTORY
+            </a>
+
+            <a href="#gallery">
+                GALLERY
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<div
+    class="hero"
+    id="top"
+>
+
+    <img
+        class="hero-image"
+        src="hero.jpg"
+        alt="F208 FRH Ford Fiesta XR2"
+    >
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            1989 Ford Fiesta
+        </div>
+
+        <h1>
+            Fiesta <span>XR2</span>
+        </h1>
+
+        <div class="hero-registration">
+            F208 FRH
+        </div>
+
+    </div>
+
+</div>
+
+
+<main>
+
+
+<!-- =========================================================
+     THE CAR
+========================================================= -->
+
+<section id="car">
+
+    <div class="section-heading">
+
+        <div class="section-kicker">
+            The Car
+        </div>
+
+        <h2>
+            F208 FRH
+        </h2>
+
+    </div>
+
+
+    <div class="car-section">
+
+
+        <div class="car-description">
+
+            <p>
+                A documented history of F208 FRH,
+                a 1989 Ford Fiesta XR2.
+            </p>
+
+            <p>
+                This site brings together photographs,
+                original documentation, ownership history
+                and memories of the car from throughout
+                its life.
+            </p>
+
+        </div>
+
+
+        <div class="details">
+
+            <div class="detail">
+
+                <span class="detail-name">
+                    Manufacturer
+                </span>
+
+                <span class="detail-value">
+                    Ford
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span class="detail-name">
+                    Model
+                </span>
+
+                <span class="detail-value">
+                    Fiesta XR2
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span class="detail-name">
+                    Year
+                </span>
+
+                <span class="detail-value">
+                    1989
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span class="detail-name">
+                    Registration
+                </span>
+
+                <span class="detail-value">
+                    F208 FRH
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- =========================================================
+     THROUGH THE YEARS
+========================================================= -->
+
+<section id="history">
+
+    <div class="section-heading">
+
+        <div class="section-kicker">
+            Archive
+        </div>
+
+        <h2>
+            Through the years
+        </h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img
+                src="road.JPG"
+                alt="Ford Fiesta XR2 on the road"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="plate.jpg"
+                alt="F208 FRH registration"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="alloys.jpeg"
+                alt="Ford Fiesta XR2 alloy wheels"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="Garage.jpeg"
+                alt="Ford Fiesta XR2 in garage"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="crystal.JPG"
+                alt="Crystal Ford"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="E151RWX.jpeg"
+                alt="Ford Fiesta XR2 archive photograph"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="xrowners.JPG"
+                alt="XR owners archive"
+            >
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- =========================================================
+     ORIGINAL DOCUMENTS
+========================================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <div class="section-kicker">
+            History
+        </div>
+
+        <h2>
+            Original documents
+        </h2>
+
+    </div>
+
+
+    <div class="gallery document-gallery">
+
+        <div class="gallery-item">
+            <img
+                src="invoice.jpeg"
+                alt="Original Ford Fiesta XR2 invoice"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="Mot.jpeg"
+                alt="Ford Fiesta XR2 MOT history"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="mot.jpg"
+                alt="Ford Fiesta XR2 MOT certificate"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="Press.jpeg"
+                alt="Ford Fiesta XR2 press archive"
+            >
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- =========================================================
+     MECHANICAL & DETAILS
+========================================================= -->
+
+<section id="gallery">
+
+    <div class="section-heading">
+
+        <div class="section-kicker">
+            Details
+        </div>
+
+        <h2>
+            Mechanical & parts
+        </h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img
+                src="Brakes.jpg"
+                alt="Ford Fiesta XR2 brakes"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="Parts.jpeg"
+                alt="Ford Fiesta XR2 parts"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="Bolt.jpeg"
+                alt="Ford Fiesta XR2 detail"
+            >
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        <span>XR</span>2
+    </div>
+
+    F208 FRH
+
+</footer>
+
+
+<!-- =========================================================
+     LIGHTBOX
+========================================================= -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+>
+
+    <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close image"
+    >
+        &times;
+    </button>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt=""
+    >
+
+</div>
+
+
+<script>
+
+    const galleryImages =
+        document.querySelectorAll(
+            ".gallery-item img"
+        );
+
+    const lightbox =
+        document.getElementById(
+            "lightbox"
+        );
+
+    const lightboxImage =
+        document.getElementById(
+            "lightboxImage"
+        );
+
+    const lightboxClose =
+        document.getElementById(
+            "lightboxClose"
+        );
+
+
+    galleryImages.forEach(
+        image => {
+
+            image.addEventListener(
+                "click",
+                () => {
+
+                    lightboxImage.src =
+                        image.src;
+
+                    lightboxImage.alt =
+                        image.alt;
+
+                    lightbox.classList.add(
+                        "active"
+                    );
+
+                    document.body.style.overflow =
+                        "hidden";
+
+                }
+            );
+
+        }
+    );
+
+
+    function closeLightbox() {
+
+        lightbox.classList.remove(
+            "active"
+        );
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+
+    lightbox.addEventListener(
+        "click",
+        closeLightbox
+    );
+
+
+    lightboxClose.addEventListener(
+        "click",
+        closeLightbox
+    );
+
+
+    lightboxImage.addEventListener(
+        "click",
+        event => {
+
+            event.stopPropagation();
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+</script>
+
+
 </body>
+
 </html>
