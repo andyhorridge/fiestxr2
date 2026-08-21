@@ -23,10 +23,6 @@
 
     <style>
 
-        /* =========================================================
-           RESET
-        ========================================================= */
-
         * {
             box-sizing: border-box;
         }
@@ -96,26 +92,15 @@
             justify-content: space-between;
         }
 
-
-        /* =========================================================
-           LOGO
-        ========================================================= */
-
         .logo {
             font-size: 25px;
             font-weight: 800;
-
             letter-spacing: -1px;
         }
 
         .logo span {
             color: #d71920;
         }
-
-
-        /* =========================================================
-           NAVIGATION
-        ========================================================= */
 
         .nav-links {
             display: flex;
@@ -126,11 +111,8 @@
         .nav-links a {
             font-size: 12px;
             font-weight: 700;
-
             letter-spacing: 1.4px;
-
             color: #d0d0d0;
-
             transition: 0.25s;
         }
 
@@ -145,7 +127,6 @@
 
         .hero {
             position: relative;
-
             height: 100vh;
             min-height: 620px;
 
@@ -169,7 +150,6 @@
 
         .hero-overlay {
             position: absolute;
-
             inset: 0;
 
             background:
@@ -189,10 +169,7 @@
 
             margin: auto;
 
-            padding:
-                0
-                32px
-                75px;
+            padding: 0 32px 75px;
 
             z-index: 2;
         }
@@ -204,27 +181,17 @@
 
             font-size: 13px;
             font-weight: 600;
-
             letter-spacing: 3px;
-
             text-transform: uppercase;
         }
 
         .hero h1 {
             margin: 0;
-
             max-width: 850px;
 
-            font-size: clamp(
-                48px,
-                8vw,
-                105px
-            );
-
+            font-size: clamp(48px, 8vw, 105px);
             line-height: 0.92;
-
             letter-spacing: -4px;
-
             font-weight: 800;
         }
 
@@ -252,19 +219,12 @@
             overflow: hidden;
         }
 
-
-        /* =========================================================
-           SECTIONS
-        ========================================================= */
-
         section {
             max-width: 1400px;
 
             margin: auto;
 
-            padding:
-                105px
-                32px;
+            padding: 105px 32px;
         }
 
         .section-heading {
@@ -287,11 +247,7 @@
         .section-heading h2 {
             margin: 0;
 
-            font-size: clamp(
-                37px,
-                5vw,
-                68px
-            );
+            font-size: clamp(37px, 5vw, 68px);
 
             line-height: 1;
 
@@ -301,10 +257,7 @@
         .section-heading p {
             max-width: 700px;
 
-            margin:
-                22px
-                0
-                0;
+            margin: 22px 0 0;
 
             font-size: 18px;
             line-height: 1.65;
@@ -314,15 +267,13 @@
 
 
         /* =========================================================
-           CAR INTRODUCTION
+           CAR INTRO
         ========================================================= */
 
         .car-section {
             display: grid;
 
-            grid-template-columns:
-                1.15fr
-                0.85fr;
+            grid-template-columns: 1.15fr 0.85fr;
 
             gap: 80px;
 
@@ -342,9 +293,7 @@
         }
 
         .details {
-            border-top:
-                1px solid
-                #272727;
+            border-top: 1px solid #272727;
         }
 
         .detail {
@@ -353,13 +302,9 @@
 
             gap: 30px;
 
-            padding:
-                17px
-                0;
+            padding: 17px 0;
 
-            border-bottom:
-                1px solid
-                #272727;
+            border-bottom: 1px solid #272727;
         }
 
         .detail-name {
@@ -372,11 +317,6 @@
             font-weight: 600;
         }
 
-
-        /* =========================================================
-           DIVIDER
-        ========================================================= */
-
         .divider {
             max-width: 1400px;
 
@@ -384,20 +324,18 @@
 
             margin: auto;
 
-            background:
-                #1b1b1b;
+            background: #1b1b1b;
         }
 
 
         /* =========================================================
-           GALLERIES
+           GALLERY
         ========================================================= */
 
         .gallery {
             display: grid;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
 
             gap: 14px;
         }
@@ -429,7 +367,6 @@
 
         .gallery-item:hover img {
             transform: scale(1.035);
-
             opacity: 0.88;
         }
 
@@ -437,23 +374,33 @@
             content: "";
 
             position: absolute;
-
             inset: 0;
 
-            border:
-                1px solid
-                rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.06);
 
             pointer-events: none;
         }
 
-
-        /* documents such as invoice / MOT */
-
         .document-gallery .gallery-item img {
             object-fit: contain;
-
             background: #111;
+        }
+
+
+        /* =========================================================
+           GALLERY LOADING MESSAGE
+        ========================================================= */
+
+        .gallery-status {
+            grid-column: 1 / -1;
+
+            padding: 50px 20px;
+
+            text-align: center;
+
+            color: #888;
+
+            font-size: 15px;
         }
 
 
@@ -473,8 +420,7 @@
 
             padding: 70px 20px 30px;
 
-            background:
-                rgba(0, 0, 0, 0.96);
+            background: rgba(0, 0, 0, 0.96);
 
             z-index: 5000;
 
@@ -519,13 +465,9 @@
         ========================================================= */
 
         footer {
-            padding:
-                70px
-                30px;
+            padding: 70px 30px;
 
-            border-top:
-                1px solid
-                #1b1b1b;
+            border-top: 1px solid #1b1b1b;
 
             text-align: center;
 
@@ -559,9 +501,7 @@
             }
 
             nav {
-                padding:
-                    0
-                    18px;
+                padding: 0 18px;
             }
 
             .logo {
@@ -574,7 +514,6 @@
 
             .nav-links a {
                 font-size: 10px;
-
                 letter-spacing: 1px;
             }
 
@@ -583,10 +522,7 @@
             }
 
             .hero-content {
-                padding:
-                    0
-                    20px
-                    55px;
+                padding: 0 20px 55px;
             }
 
             .hero h1 {
@@ -598,21 +534,16 @@
             }
 
             section {
-                padding:
-                    75px
-                    20px;
+                padding: 75px 20px;
             }
 
             .car-section {
                 grid-template-columns: 1fr;
-
                 gap: 35px;
             }
 
             .gallery {
-                grid-template-columns:
-                    repeat(2, 1fr);
-
+                grid-template-columns: repeat(2, 1fr);
                 gap: 7px;
             }
 
@@ -844,7 +775,7 @@
 
 
 <!-- =========================================================
-     THROUGH THE YEARS
+     THROUGH THE YEARS - AUTOMATIC PHOTO GALLERY
 ========================================================= -->
 
 <section id="history">
@@ -857,6 +788,46 @@
 
         <h2>
             Through the years
+        </h2>
+
+        <p>
+            A photographic record of F208 FRH through the years.
+        </p>
+
+    </div>
+
+
+    <div
+        class="gallery"
+        id="automaticGallery"
+    >
+
+        <div class="gallery-status">
+            Loading photographs...
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- =========================================================
+     ORIGINAL ARCHIVE PHOTOS
+========================================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <div class="section-kicker">
+            Archive
+        </div>
+
+        <h2>
+            Historical archive
         </h2>
 
     </div>
@@ -979,7 +950,7 @@
 
 
 <!-- =========================================================
-     MECHANICAL & DETAILS
+     MECHANICAL & PARTS
 ========================================================= -->
 
 <section id="gallery">
@@ -1071,20 +1042,192 @@
 
 <script>
 
-    const galleryImages =
-        document.querySelectorAll(
-            ".gallery-item img"
+    /* =========================================================
+       AUTOMATIC GITHUB PHOTO GALLERY
+    ========================================================= */
+
+    const githubOwner = "andyhorridge";
+    const githubRepo = "fiestaxr2";
+    const photosFolder = "photos";
+
+    const automaticGallery =
+        document.getElementById(
+            "automaticGallery"
         );
+
+
+    async function loadPhotoGallery() {
+
+        try {
+
+            const apiUrl =
+                `https://api.github.com/repos/${githubOwner}/${githubRepo}/contents/${photosFolder}`;
+
+
+            const response =
+                await fetch(
+                    apiUrl,
+                    {
+                        cache: "no-store"
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    "Unable to read the photos folder."
+                );
+
+            }
+
+
+            const files =
+                await response.json();
+
+
+            const imageFiles =
+                files
+                    .filter(file => {
+
+                        return (
+                            file.type === "file" &&
+                            /^photo\d+\.(jpg|jpeg|png)$/i.test(
+                                file.name
+                            )
+                        );
+
+                    })
+                    .sort((a, b) => {
+
+                        const numberA =
+                            parseInt(
+                                a.name.match(/\d+/)[0],
+                                10
+                            );
+
+                        const numberB =
+                            parseInt(
+                                b.name.match(/\d+/)[0],
+                                10
+                            );
+
+                        return numberA - numberB;
+
+                    });
+
+
+            automaticGallery.innerHTML = "";
+
+
+            if (imageFiles.length === 0) {
+
+                automaticGallery.innerHTML =
+                    `
+                    <div class="gallery-status">
+                        No gallery photographs found.
+                    </div>
+                    `;
+
+                return;
+
+            }
+
+
+            imageFiles.forEach(
+                (file, index) => {
+
+                    const galleryItem =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    galleryItem.className =
+                        "gallery-item";
+
+
+                    const image =
+                        document.createElement(
+                            "img"
+                        );
+
+
+                    image.src =
+                        file.download_url;
+
+
+                    image.alt =
+                        `F208 FRH Ford Fiesta XR2 photo ${index + 1}`;
+
+
+                    image.loading =
+                        "lazy";
+
+
+                    image.addEventListener(
+                        "click",
+                        () => {
+
+                            openLightbox(
+                                image.src,
+                                image.alt
+                            );
+
+                        }
+                    );
+
+
+                    galleryItem.appendChild(
+                        image
+                    );
+
+
+                    automaticGallery.appendChild(
+                        galleryItem
+                    );
+
+                }
+            );
+
+
+        }
+
+        catch (error) {
+
+            console.error(
+                error
+            );
+
+
+            automaticGallery.innerHTML =
+                `
+                <div class="gallery-status">
+                    The photo gallery could not be loaded.
+                    Please try refreshing the page.
+                </div>
+                `;
+
+        }
+
+    }
+
+
+    /* =========================================================
+       LIGHTBOX
+    ========================================================= */
 
     const lightbox =
         document.getElementById(
             "lightbox"
         );
 
+
     const lightboxImage =
         document.getElementById(
             "lightboxImage"
         );
+
 
     const lightboxClose =
         document.getElementById(
@@ -1092,31 +1235,28 @@
         );
 
 
-    galleryImages.forEach(
-        image => {
+    function openLightbox(
+        imageSource,
+        imageAlt
+    ) {
 
-            image.addEventListener(
-                "click",
-                () => {
+        lightboxImage.src =
+            imageSource;
 
-                    lightboxImage.src =
-                        image.src;
 
-                    lightboxImage.alt =
-                        image.alt;
+        lightboxImage.alt =
+            imageAlt;
 
-                    lightbox.classList.add(
-                        "active"
-                    );
 
-                    document.body.style.overflow =
-                        "hidden";
+        lightbox.classList.add(
+            "active"
+        );
 
-                }
-            );
 
-        }
-    );
+        document.body.style.overflow =
+            "hidden";
+
+    }
 
 
     function closeLightbox() {
@@ -1125,10 +1265,44 @@
             "active"
         );
 
+
         document.body.style.overflow =
             "";
 
     }
+
+
+    /* Existing static gallery photographs */
+
+    document
+        .querySelectorAll(
+            ".gallery-item img"
+        )
+        .forEach(
+            image => {
+
+                if (
+                    !image.closest(
+                        "#automaticGallery"
+                    )
+                ) {
+
+                    image.addEventListener(
+                        "click",
+                        () => {
+
+                            openLightbox(
+                                image.src,
+                                image.alt
+                            );
+
+                        }
+                    );
+
+                }
+
+            }
+        );
 
 
     lightbox.addEventListener(
@@ -1167,6 +1341,11 @@
 
         }
     );
+
+
+    /* Load numbered photographs */
+
+    loadPhotoGallery();
 
 </script>
 
