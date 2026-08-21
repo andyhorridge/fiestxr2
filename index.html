@@ -127,6 +127,7 @@
 
         .hero {
             position: relative;
+
             height: 100vh;
             min-height: 620px;
 
@@ -168,7 +169,6 @@
             max-width: 1400px;
 
             margin: auto;
-
             padding: 0 32px 75px;
 
             z-index: 2;
@@ -182,11 +182,13 @@
             font-size: 13px;
             font-weight: 600;
             letter-spacing: 3px;
+
             text-transform: uppercase;
         }
 
         .hero h1 {
             margin: 0;
+
             max-width: 850px;
 
             font-size: clamp(48px, 8vw, 105px);
@@ -212,7 +214,7 @@
 
 
         /* =========================================================
-           MAIN PAGE
+           MAIN
         ========================================================= */
 
         main {
@@ -236,7 +238,6 @@
 
             font-size: 11px;
             font-weight: 700;
-
             letter-spacing: 3px;
 
             color: #d71920;
@@ -267,7 +268,7 @@
 
 
         /* =========================================================
-           CAR INTRO
+           CAR DETAILS
         ========================================================= */
 
         .car-section {
@@ -329,6 +330,40 @@
 
 
         /* =========================================================
+           TIMELINE
+        ========================================================= */
+
+        .timeline-block {
+            margin-top: 75px;
+        }
+
+        .timeline-block:first-of-type {
+            margin-top: 0;
+        }
+
+        .timeline-heading {
+            margin-bottom: 25px;
+        }
+
+        .timeline-heading h3 {
+            margin: 0;
+
+            font-size: clamp(27px, 3vw, 40px);
+
+            letter-spacing: -1px;
+        }
+
+        .timeline-line {
+            width: 45px;
+            height: 3px;
+
+            margin-top: 12px;
+
+            background: #d71920;
+        }
+
+
+        /* =========================================================
            GALLERY
         ========================================================= */
 
@@ -381,20 +416,21 @@
             pointer-events: none;
         }
 
+
+        /* DOCUMENT IMAGES */
+
         .document-gallery .gallery-item img {
             object-fit: contain;
             background: #111;
         }
 
 
-        /* =========================================================
-           GALLERY LOADING MESSAGE
-        ========================================================= */
+        /* LOADING */
 
         .gallery-status {
             grid-column: 1 / -1;
 
-            padding: 50px 20px;
+            padding: 40px 20px;
 
             text-align: center;
 
@@ -547,6 +583,10 @@
                 gap: 7px;
             }
 
+            .timeline-block {
+                margin-top: 55px;
+            }
+
         }
 
 
@@ -602,10 +642,7 @@
 
     <nav>
 
-        <a
-            class="logo"
-            href="#top"
-        >
+        <a class="logo" href="#top">
             <span>XR</span>2
         </a>
 
@@ -620,8 +657,8 @@
                 HISTORY
             </a>
 
-            <a href="#gallery">
-                GALLERY
+            <a href="#documents">
+                DOCUMENTS
             </a>
 
         </div>
@@ -635,10 +672,7 @@
      HERO
 ========================================================= -->
 
-<div
-    class="hero"
-    id="top"
->
+<div class="hero" id="top">
 
     <img
         class="hero-image"
@@ -775,7 +809,7 @@
 
 
 <!-- =========================================================
-     THROUGH THE YEARS - AUTOMATIC PHOTO GALLERY
+     HISTORY
 ========================================================= -->
 
 <section id="history">
@@ -797,16 +831,101 @@
     </div>
 
 
-    <div
-        class="gallery"
-        id="automaticGallery"
-    >
+    <!-- =====================================================
+         COLLECTION DAY
+         PHOTO001 - PHOTO006 + ROAD.JPG
+    ====================================================== -->
 
-        <div class="gallery-status">
-            Loading photographs...
+    <div class="timeline-block">
+
+        <div class="timeline-heading">
+
+            <h3>
+                Collection Day
+            </h3>
+
+            <div class="timeline-line"></div>
+
+        </div>
+
+
+        <div
+            class="gallery"
+            id="collectionGallery"
+        >
+
+            <div class="gallery-status">
+                Loading photographs...
+            </div>
+
         </div>
 
     </div>
+
+
+    <!-- =====================================================
+         EARLY REPAIRS
+         PHOTO007 - PHOTO012
+    ====================================================== -->
+
+    <div class="timeline-block">
+
+        <div class="timeline-heading">
+
+            <h3>
+                Early Repairs
+            </h3>
+
+            <div class="timeline-line"></div>
+
+        </div>
+
+
+        <div
+            class="gallery"
+            id="repairsGallery"
+        >
+
+            <div class="gallery-status">
+                Loading photographs...
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         LATER YEARS
+         PHOTO013 ONWARDS
+    ====================================================== -->
+
+    <div class="timeline-block">
+
+        <div class="timeline-heading">
+
+            <h3>
+                Later Years
+            </h3>
+
+            <div class="timeline-line"></div>
+
+        </div>
+
+
+        <div
+            class="gallery"
+            id="laterGallery"
+        >
+
+            <div class="gallery-status">
+                Loading photographs...
+            </div>
+
+        </div>
+
+    </div>
+
 
 </section>
 
@@ -815,7 +934,7 @@
 
 
 <!-- =========================================================
-     ORIGINAL ARCHIVE PHOTOS
+     HISTORICAL ARCHIVE
 ========================================================= -->
 
 <section>
@@ -836,52 +955,42 @@
     <div class="gallery">
 
         <div class="gallery-item">
-            <img
-                src="road.JPG"
-                alt="Ford Fiesta XR2 on the road"
-            >
-        </div>
 
-        <div class="gallery-item">
             <img
                 src="plate.jpg"
                 alt="F208 FRH registration"
             >
+
         </div>
 
+
         <div class="gallery-item">
+
             <img
                 src="alloys.jpeg"
                 alt="Ford Fiesta XR2 alloy wheels"
             >
+
         </div>
 
+
         <div class="gallery-item">
+
             <img
                 src="Garage.jpeg"
                 alt="Ford Fiesta XR2 in garage"
             >
+
         </div>
 
+
         <div class="gallery-item">
+
             <img
                 src="crystal.JPG"
                 alt="Crystal Ford"
             >
-        </div>
 
-        <div class="gallery-item">
-            <img
-                src="E151RWX.jpeg"
-                alt="Ford Fiesta XR2 archive photograph"
-            >
-        </div>
-
-        <div class="gallery-item">
-            <img
-                src="xrowners.JPG"
-                alt="XR owners archive"
-            >
         </div>
 
     </div>
@@ -896,7 +1005,7 @@
      ORIGINAL DOCUMENTS
 ========================================================= -->
 
-<section>
+<section id="documents">
 
     <div class="section-heading">
 
@@ -913,33 +1022,46 @@
 
     <div class="gallery document-gallery">
 
+
         <div class="gallery-item">
+
             <img
                 src="invoice.jpeg"
                 alt="Original Ford Fiesta XR2 invoice"
             >
+
         </div>
 
+
         <div class="gallery-item">
+
             <img
                 src="Mot.jpeg"
                 alt="Ford Fiesta XR2 MOT history"
             >
+
         </div>
 
+
         <div class="gallery-item">
+
             <img
                 src="mot.jpg"
                 alt="Ford Fiesta XR2 MOT certificate"
             >
+
         </div>
 
+
         <div class="gallery-item">
+
             <img
                 src="Press.jpeg"
                 alt="Ford Fiesta XR2 press archive"
             >
+
         </div>
+
 
     </div>
 
@@ -953,7 +1075,7 @@
      MECHANICAL & PARTS
 ========================================================= -->
 
-<section id="gallery">
+<section>
 
     <div class="section-heading">
 
@@ -970,26 +1092,36 @@
 
     <div class="gallery">
 
+
         <div class="gallery-item">
+
             <img
                 src="Brakes.jpg"
                 alt="Ford Fiesta XR2 brakes"
             >
+
         </div>
 
+
         <div class="gallery-item">
+
             <img
                 src="Parts.jpeg"
                 alt="Ford Fiesta XR2 parts"
             >
+
         </div>
 
+
         <div class="gallery-item">
+
             <img
                 src="Bolt.jpeg"
                 alt="Ford Fiesta XR2 detail"
             >
+
         </div>
+
 
     </div>
 
@@ -1043,174 +1175,14 @@
 <script>
 
     /* =========================================================
-       AUTOMATIC GITHUB PHOTO GALLERY
+       GITHUB SETTINGS
     ========================================================= */
 
     const githubOwner = "andyhorridge";
+
     const githubRepo = "fiestaxr2";
+
     const photosFolder = "photos";
-
-    const automaticGallery =
-        document.getElementById(
-            "automaticGallery"
-        );
-
-
-    async function loadPhotoGallery() {
-
-        try {
-
-            const apiUrl =
-                `https://api.github.com/repos/${githubOwner}/${githubRepo}/contents/${photosFolder}`;
-
-
-            const response =
-                await fetch(
-                    apiUrl,
-                    {
-                        cache: "no-store"
-                    }
-                );
-
-
-            if (!response.ok) {
-
-                throw new Error(
-                    "Unable to read the photos folder."
-                );
-
-            }
-
-
-            const files =
-                await response.json();
-
-
-            const imageFiles =
-                files
-                    .filter(file => {
-
-                        return (
-                            file.type === "file" &&
-                            /^photo\d+\.(jpg|jpeg|png)$/i.test(
-                                file.name
-                            )
-                        );
-
-                    })
-                    .sort((a, b) => {
-
-                        const numberA =
-                            parseInt(
-                                a.name.match(/\d+/)[0],
-                                10
-                            );
-
-                        const numberB =
-                            parseInt(
-                                b.name.match(/\d+/)[0],
-                                10
-                            );
-
-                        return numberA - numberB;
-
-                    });
-
-
-            automaticGallery.innerHTML = "";
-
-
-            if (imageFiles.length === 0) {
-
-                automaticGallery.innerHTML =
-                    `
-                    <div class="gallery-status">
-                        No gallery photographs found.
-                    </div>
-                    `;
-
-                return;
-
-            }
-
-
-            imageFiles.forEach(
-                (file, index) => {
-
-                    const galleryItem =
-                        document.createElement(
-                            "div"
-                        );
-
-
-                    galleryItem.className =
-                        "gallery-item";
-
-
-                    const image =
-                        document.createElement(
-                            "img"
-                        );
-
-
-                    image.src =
-                        file.download_url;
-
-
-                    image.alt =
-                        `F208 FRH Ford Fiesta XR2 photo ${index + 1}`;
-
-
-                    image.loading =
-                        "lazy";
-
-
-                    image.addEventListener(
-                        "click",
-                        () => {
-
-                            openLightbox(
-                                image.src,
-                                image.alt
-                            );
-
-                        }
-                    );
-
-
-                    galleryItem.appendChild(
-                        image
-                    );
-
-
-                    automaticGallery.appendChild(
-                        galleryItem
-                    );
-
-                }
-            );
-
-
-        }
-
-        catch (error) {
-
-            console.error(
-                error
-            );
-
-
-            automaticGallery.innerHTML =
-                `
-                <div class="gallery-status">
-                    The photo gallery could not be loaded.
-                    Please try refreshing the page.
-                </div>
-                `;
-
-        }
-
-    }
 
 
     /* =========================================================
@@ -1272,39 +1244,6 @@
     }
 
 
-    /* Existing static gallery photographs */
-
-    document
-        .querySelectorAll(
-            ".gallery-item img"
-        )
-        .forEach(
-            image => {
-
-                if (
-                    !image.closest(
-                        "#automaticGallery"
-                    )
-                ) {
-
-                    image.addEventListener(
-                        "click",
-                        () => {
-
-                            openLightbox(
-                                image.src,
-                                image.alt
-                            );
-
-                        }
-                    );
-
-                }
-
-            }
-        );
-
-
     lightbox.addEventListener(
         "click",
         closeLightbox
@@ -1343,7 +1282,402 @@
     );
 
 
-    /* Load numbered photographs */
+    /* =========================================================
+       CREATE GALLERY IMAGE
+    ========================================================= */
+
+    function createGalleryImage(
+        imageSource,
+        imageAlt
+    ) {
+
+        const galleryItem =
+            document.createElement(
+                "div"
+            );
+
+
+        galleryItem.className =
+            "gallery-item";
+
+
+        const image =
+            document.createElement(
+                "img"
+            );
+
+
+        image.src =
+            imageSource;
+
+
+        image.alt =
+            imageAlt;
+
+
+        image.loading =
+            "lazy";
+
+
+        image.addEventListener(
+            "click",
+            () => {
+
+                openLightbox(
+                    image.src,
+                    image.alt
+                );
+
+            }
+        );
+
+
+        galleryItem.appendChild(
+            image
+        );
+
+
+        return galleryItem;
+
+    }
+
+
+    /* =========================================================
+       AUTOMATIC NUMBERED PHOTO GALLERY
+    ========================================================= */
+
+    async function loadPhotoGallery() {
+
+
+        const collectionGallery =
+            document.getElementById(
+                "collectionGallery"
+            );
+
+
+        const repairsGallery =
+            document.getElementById(
+                "repairsGallery"
+            );
+
+
+        const laterGallery =
+            document.getElementById(
+                "laterGallery"
+            );
+
+
+        try {
+
+
+            const apiUrl =
+                `https://api.github.com/repos/${githubOwner}/${githubRepo}/contents/${photosFolder}`;
+
+
+            const response =
+                await fetch(
+                    apiUrl,
+                    {
+                        cache: "no-store"
+                    }
+                );
+
+
+            if (
+                !response.ok
+            ) {
+
+                throw new Error(
+                    "Unable to read the photos folder."
+                );
+
+            }
+
+
+            const files =
+                await response.json();
+
+
+            const imageFiles =
+                files
+
+                    .filter(
+                        file => {
+
+                            return (
+                                file.type === "file" &&
+
+                                /^photo\d+\.(jpg|jpeg|png)$/i.test(
+                                    file.name
+                                )
+                            );
+
+                        }
+                    )
+
+
+                    .map(
+                        file => {
+
+                            const numberMatch =
+                                file.name.match(
+                                    /\d+/
+                                );
+
+
+                            return {
+
+                                ...file,
+
+                                photoNumber:
+                                    numberMatch
+                                        ? parseInt(
+                                            numberMatch[0],
+                                            10
+                                        )
+                                        : 0
+
+                            };
+
+                        }
+                    )
+
+
+                    .sort(
+                        (a, b) =>
+
+                            a.photoNumber -
+                            b.photoNumber
+                    );
+
+
+            collectionGallery.innerHTML =
+                "";
+
+
+            repairsGallery.innerHTML =
+                "";
+
+
+            laterGallery.innerHTML =
+                "";
+
+
+            /* =====================================================
+               COLLECTION DAY
+               001 - 006
+            ===================================================== */
+
+            imageFiles
+
+                .filter(
+                    file =>
+
+                        file.photoNumber >= 1 &&
+                        file.photoNumber <= 6
+                )
+
+                .forEach(
+                    file => {
+
+                        collectionGallery.appendChild(
+
+                            createGalleryImage(
+
+                                file.download_url,
+
+                                `F208 FRH Collection Day - Photo ${file.photoNumber}`
+
+                            )
+
+                        );
+
+                    }
+                );
+
+
+            /* ROAD.JPG AFTER PHOTO006 */
+
+            collectionGallery.appendChild(
+
+                createGalleryImage(
+
+                    "road.JPG",
+
+                    "F208 FRH on Collection Day"
+
+                )
+
+            );
+
+
+            /* =====================================================
+               EARLY REPAIRS
+               007 - 012
+            ===================================================== */
+
+            imageFiles
+
+                .filter(
+                    file =>
+
+                        file.photoNumber >= 7 &&
+                        file.photoNumber <= 12
+                )
+
+                .forEach(
+                    file => {
+
+                        repairsGallery.appendChild(
+
+                            createGalleryImage(
+
+                                file.download_url,
+
+                                `F208 FRH Early Repairs - Photo ${file.photoNumber}`
+
+                            )
+
+                        );
+
+                    }
+                );
+
+
+            /* =====================================================
+               LATER YEARS
+               013 ONWARDS
+            ===================================================== */
+
+            imageFiles
+
+                .filter(
+                    file =>
+
+                        file.photoNumber >= 13
+                )
+
+                .forEach(
+                    file => {
+
+                        laterGallery.appendChild(
+
+                            createGalleryImage(
+
+                                file.download_url,
+
+                                `F208 FRH - Photo ${file.photoNumber}`
+
+                            )
+
+                        );
+
+                    }
+                );
+
+
+            /* =====================================================
+               EMPTY SECTION FALLBACKS
+            ===================================================== */
+
+            if (
+                repairsGallery.children.length === 0
+            ) {
+
+                repairsGallery.innerHTML =
+                    `
+                    <div class="gallery-status">
+                        No photographs in this section yet.
+                    </div>
+                    `;
+
+            }
+
+
+            if (
+                laterGallery.children.length === 0
+            ) {
+
+                laterGallery.innerHTML =
+                    `
+                    <div class="gallery-status">
+                        No photographs in this section yet.
+                    </div>
+                    `;
+
+            }
+
+
+        }
+
+        catch (
+            error
+        ) {
+
+
+            console.error(
+                error
+            );
+
+
+            collectionGallery.innerHTML =
+                `
+                <div class="gallery-status">
+                    The photographs could not be loaded.
+                </div>
+                `;
+
+
+            repairsGallery.innerHTML =
+                `
+                <div class="gallery-status">
+                    The photographs could not be loaded.
+                </div>
+                `;
+
+
+            laterGallery.innerHTML =
+                `
+                <div class="gallery-status">
+                    The photographs could not be loaded.
+                </div>
+                `;
+
+        }
+
+    }
+
+
+    /* =========================================================
+       STATIC IMAGE LIGHTBOX
+    ========================================================= */
+
+    document
+        .querySelectorAll(
+            ".gallery-item img"
+        )
+        .forEach(
+            image => {
+
+                image.addEventListener(
+                    "click",
+                    () => {
+
+                        openLightbox(
+                            image.src,
+                            image.alt
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    /* =========================================================
+       LOAD NUMBERED PHOTOS
+    ========================================================= */
 
     loadPhotoGallery();
 
