@@ -33,8 +33,10 @@
 
         body {
             margin: 0;
+
             background: #050505;
             color: #f5f5f5;
+
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -61,6 +63,7 @@
 
         header {
             position: fixed;
+
             top: 0;
             left: 0;
             right: 0;
@@ -75,7 +78,9 @@
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom:
+                1px solid
+                rgba(255, 255, 255, 0.08);
 
             z-index: 1000;
         }
@@ -92,9 +97,15 @@
             justify-content: space-between;
         }
 
+
+        /* =========================================================
+           LOGO
+        ========================================================= */
+
         .logo {
             font-size: 25px;
             font-weight: 800;
+
             letter-spacing: -1px;
         }
 
@@ -102,17 +113,26 @@
             color: #d71920;
         }
 
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
         .nav-links {
             display: flex;
             align-items: center;
+
             gap: 30px;
         }
 
         .nav-links a {
             font-size: 12px;
             font-weight: 700;
+
             letter-spacing: 1.4px;
+
             color: #d0d0d0;
+
             transition: 0.25s;
         }
 
@@ -151,6 +171,7 @@
 
         .hero-overlay {
             position: absolute;
+
             inset: 0;
 
             background:
@@ -169,7 +190,11 @@
             max-width: 1400px;
 
             margin: auto;
-            padding: 0 32px 75px;
+
+            padding:
+                0
+                32px
+                75px;
 
             z-index: 2;
         }
@@ -181,6 +206,7 @@
 
             font-size: 13px;
             font-weight: 600;
+
             letter-spacing: 3px;
 
             text-transform: uppercase;
@@ -191,9 +217,17 @@
 
             max-width: 850px;
 
-            font-size: clamp(48px, 8vw, 105px);
+            font-size:
+                clamp(
+                    48px,
+                    8vw,
+                    105px
+                );
+
             line-height: 0.92;
+
             letter-spacing: -4px;
+
             font-weight: 800;
         }
 
@@ -226,7 +260,9 @@
 
             margin: auto;
 
-            padding: 105px 32px;
+            padding:
+                105px
+                32px;
         }
 
         .section-heading {
@@ -238,6 +274,7 @@
 
             font-size: 11px;
             font-weight: 700;
+
             letter-spacing: 3px;
 
             color: #d71920;
@@ -248,7 +285,12 @@
         .section-heading h2 {
             margin: 0;
 
-            font-size: clamp(37px, 5vw, 68px);
+            font-size:
+                clamp(
+                    37px,
+                    5vw,
+                    68px
+                );
 
             line-height: 1;
 
@@ -258,9 +300,13 @@
         .section-heading p {
             max-width: 700px;
 
-            margin: 22px 0 0;
+            margin:
+                22px
+                0
+                0;
 
             font-size: 18px;
+
             line-height: 1.65;
 
             color: #a9a9a9;
@@ -268,13 +314,15 @@
 
 
         /* =========================================================
-           CAR DETAILS
+           CAR
         ========================================================= */
 
         .car-section {
             display: grid;
 
-            grid-template-columns: 1.15fr 0.85fr;
+            grid-template-columns:
+                1.15fr
+                0.85fr;
 
             gap: 80px;
 
@@ -294,18 +342,25 @@
         }
 
         .details {
-            border-top: 1px solid #272727;
+            border-top:
+                1px solid
+                #272727;
         }
 
         .detail {
             display: flex;
+
             justify-content: space-between;
 
             gap: 30px;
 
-            padding: 17px 0;
+            padding:
+                17px
+                0;
 
-            border-bottom: 1px solid #272727;
+            border-bottom:
+                1px solid
+                #272727;
         }
 
         .detail-name {
@@ -317,6 +372,11 @@
 
             font-weight: 600;
         }
+
+
+        /* =========================================================
+           DIVIDER
+        ========================================================= */
 
         .divider {
             max-width: 1400px;
@@ -334,7 +394,7 @@
         ========================================================= */
 
         .timeline-block {
-            margin-top: 75px;
+            margin-top: 80px;
         }
 
         .timeline-block:first-of-type {
@@ -348,7 +408,12 @@
         .timeline-heading h3 {
             margin: 0;
 
-            font-size: clamp(27px, 3vw, 40px);
+            font-size:
+                clamp(
+                    27px,
+                    3vw,
+                    40px
+                );
 
             letter-spacing: -1px;
         }
@@ -370,7 +435,8 @@
         .gallery {
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:
+                repeat(3, 1fr);
 
             gap: 14px;
         }
@@ -402,6 +468,7 @@
 
         .gallery-item:hover img {
             transform: scale(1.035);
+
             opacity: 0.88;
         }
 
@@ -409,28 +476,27 @@
             content: "";
 
             position: absolute;
+
             inset: 0;
 
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.06);
 
             pointer-events: none;
         }
 
 
-        /* DOCUMENT IMAGES */
-
-        .document-gallery .gallery-item img {
-            object-fit: contain;
-            background: #111;
-        }
-
-
-        /* LOADING */
+        /* =========================================================
+           LOADING
+        ========================================================= */
 
         .gallery-status {
             grid-column: 1 / -1;
 
-            padding: 40px 20px;
+            padding:
+                40px
+                20px;
 
             text-align: center;
 
@@ -454,9 +520,13 @@
             align-items: center;
             justify-content: center;
 
-            padding: 70px 20px 30px;
+            padding:
+                70px
+                20px
+                30px;
 
-            background: rgba(0, 0, 0, 0.96);
+            background:
+                rgba(0, 0, 0, 0.96);
 
             z-index: 5000;
 
@@ -474,7 +544,9 @@
             object-fit: contain;
 
             box-shadow:
-                0 15px 60px
+                0
+                15px
+                60px
                 rgba(0, 0, 0, 0.65);
         }
 
@@ -488,7 +560,7 @@
 
             background: none;
 
-            color: white;
+            color: #ffffff;
 
             font-size: 38px;
 
@@ -501,9 +573,13 @@
         ========================================================= */
 
         footer {
-            padding: 70px 30px;
+            padding:
+                70px
+                30px;
 
-            border-top: 1px solid #1b1b1b;
+            border-top:
+                1px solid
+                #1b1b1b;
 
             text-align: center;
 
@@ -515,7 +591,7 @@
         .footer-logo {
             margin-bottom: 15px;
 
-            color: #fff;
+            color: #ffffff;
 
             font-size: 22px;
             font-weight: 800;
@@ -537,7 +613,9 @@
             }
 
             nav {
-                padding: 0 18px;
+                padding:
+                    0
+                    18px;
             }
 
             .logo {
@@ -550,6 +628,7 @@
 
             .nav-links a {
                 font-size: 10px;
+
                 letter-spacing: 1px;
             }
 
@@ -558,7 +637,10 @@
             }
 
             .hero-content {
-                padding: 0 20px 55px;
+                padding:
+                    0
+                    20px
+                    55px;
             }
 
             .hero h1 {
@@ -570,16 +652,21 @@
             }
 
             section {
-                padding: 75px 20px;
+                padding:
+                    75px
+                    20px;
             }
 
             .car-section {
                 grid-template-columns: 1fr;
+
                 gap: 35px;
             }
 
             .gallery {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
+
                 gap: 7px;
             }
 
@@ -642,7 +729,10 @@
 
     <nav>
 
-        <a class="logo" href="#top">
+        <a
+            class="logo"
+            href="#top"
+        >
             <span>XR</span>2
         </a>
 
@@ -657,10 +747,6 @@
                 HISTORY
             </a>
 
-            <a href="#documents">
-                DOCUMENTS
-            </a>
-
         </div>
 
     </nav>
@@ -672,7 +758,10 @@
      HERO
 ========================================================= -->
 
-<div class="hero" id="top">
+<div
+    class="hero"
+    id="top"
+>
 
     <img
         class="hero-image"
@@ -736,15 +825,15 @@
 
             <p>
                 This site brings together photographs,
-                original documentation, ownership history
-                and memories of the car from throughout
-                its life.
+                ownership history and memories of the car
+                from throughout its life.
             </p>
 
         </div>
 
 
         <div class="details">
+
 
             <div class="detail">
 
@@ -797,6 +886,7 @@
 
             </div>
 
+
         </div>
 
 
@@ -825,7 +915,8 @@
         </h2>
 
         <p>
-            A photographic record of F208 FRH through the years.
+            A photographic record of F208 FRH
+            through the years.
         </p>
 
     </div>
@@ -833,7 +924,8 @@
 
     <!-- =====================================================
          COLLECTION DAY
-         PHOTO001 - PHOTO006 + ROAD.JPG
+         ROAD.JPG FIRST
+         THEN PHOTO001 - PHOTO006
     ====================================================== -->
 
     <div class="timeline-block">
@@ -865,7 +957,9 @@
 
     <!-- =====================================================
          EARLY REPAIRS
-         PHOTO007 - PHOTO012
+         PHOTO008 - PHOTO012
+         THEN PHOTO013
+         PHOTO007 EXCLUDED
     ====================================================== -->
 
     <div class="timeline-block">
@@ -897,7 +991,8 @@
 
     <!-- =====================================================
          LATER YEARS
-         PHOTO013 ONWARDS
+         STATIC ARCHIVE PHOTOS
+         + PHOTO014 ONWARDS
     ====================================================== -->
 
     <div class="timeline-block">
@@ -926,204 +1021,6 @@
 
     </div>
 
-
-</section>
-
-
-<div class="divider"></div>
-
-
-<!-- =========================================================
-     HISTORICAL ARCHIVE
-========================================================= -->
-
-<section>
-
-    <div class="section-heading">
-
-        <div class="section-kicker">
-            Archive
-        </div>
-
-        <h2>
-            Historical archive
-        </h2>
-
-    </div>
-
-
-    <div class="gallery">
-
-        <div class="gallery-item">
-
-            <img
-                src="plate.jpg"
-                alt="F208 FRH registration"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="alloys.jpeg"
-                alt="Ford Fiesta XR2 alloy wheels"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="Garage.jpeg"
-                alt="Ford Fiesta XR2 in garage"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="crystal.JPG"
-                alt="Crystal Ford"
-            >
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<div class="divider"></div>
-
-
-<!-- =========================================================
-     ORIGINAL DOCUMENTS
-========================================================= -->
-
-<section id="documents">
-
-    <div class="section-heading">
-
-        <div class="section-kicker">
-            History
-        </div>
-
-        <h2>
-            Original documents
-        </h2>
-
-    </div>
-
-
-    <div class="gallery document-gallery">
-
-
-        <div class="gallery-item">
-
-            <img
-                src="invoice.jpeg"
-                alt="Original Ford Fiesta XR2 invoice"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="Mot.jpeg"
-                alt="Ford Fiesta XR2 MOT history"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="mot.jpg"
-                alt="Ford Fiesta XR2 MOT certificate"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="Press.jpeg"
-                alt="Ford Fiesta XR2 press archive"
-            >
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<div class="divider"></div>
-
-
-<!-- =========================================================
-     MECHANICAL & PARTS
-========================================================= -->
-
-<section>
-
-    <div class="section-heading">
-
-        <div class="section-kicker">
-            Details
-        </div>
-
-        <h2>
-            Mechanical & parts
-        </h2>
-
-    </div>
-
-
-    <div class="gallery">
-
-
-        <div class="gallery-item">
-
-            <img
-                src="Brakes.jpg"
-                alt="Ford Fiesta XR2 brakes"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="Parts.jpeg"
-                alt="Ford Fiesta XR2 parts"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="Bolt.jpeg"
-                alt="Ford Fiesta XR2 detail"
-            >
-
-        </div>
-
-
-    </div>
 
 </section>
 
@@ -1178,11 +1075,14 @@
        GITHUB SETTINGS
     ========================================================= */
 
-    const githubOwner = "andyhorridge";
+    const githubOwner =
+        "andyhorridge";
 
-    const githubRepo = "fiestaxr2";
+    const githubRepo =
+        "fiestaxr2";
 
-    const photosFolder = "photos";
+    const photosFolder =
+        "photos";
 
 
     /* =========================================================
@@ -1194,12 +1094,10 @@
             "lightbox"
         );
 
-
     const lightboxImage =
         document.getElementById(
             "lightboxImage"
         );
-
 
     const lightboxClose =
         document.getElementById(
@@ -1215,15 +1113,12 @@
         lightboxImage.src =
             imageSource;
 
-
         lightboxImage.alt =
             imageAlt;
-
 
         lightbox.classList.add(
             "active"
         );
-
 
         document.body.style.overflow =
             "hidden";
@@ -1236,7 +1131,6 @@
         lightbox.classList.remove(
             "active"
         );
-
 
         document.body.style.overflow =
             "";
@@ -1296,7 +1190,6 @@
                 "div"
             );
 
-
         galleryItem.className =
             "gallery-item";
 
@@ -1306,14 +1199,11 @@
                 "img"
             );
 
-
         image.src =
             imageSource;
 
-
         image.alt =
             imageAlt;
-
 
         image.loading =
             "lazy";
@@ -1336,14 +1226,13 @@
             image
         );
 
-
         return galleryItem;
 
     }
 
 
     /* =========================================================
-       AUTOMATIC NUMBERED PHOTO GALLERY
+       LOAD PHOTO GALLERY
     ========================================================= */
 
     async function loadPhotoGallery() {
@@ -1388,7 +1277,7 @@
             ) {
 
                 throw new Error(
-                    "Unable to read the photos folder."
+                    "Unable to read photos folder."
                 );
 
             }
@@ -1405,11 +1294,13 @@
                         file => {
 
                             return (
+
                                 file.type === "file" &&
 
                                 /^photo\d+\.(jpg|jpeg|png)$/i.test(
                                     file.name
                                 )
+
                             );
 
                         }
@@ -1454,10 +1345,8 @@
             collectionGallery.innerHTML =
                 "";
 
-
             repairsGallery.innerHTML =
                 "";
-
 
             laterGallery.innerHTML =
                 "";
@@ -1465,8 +1354,24 @@
 
             /* =====================================================
                COLLECTION DAY
-               001 - 006
+
+               ROAD.JPG FIRST
             ===================================================== */
+
+            collectionGallery.appendChild(
+
+                createGalleryImage(
+
+                    "road.JPG",
+
+                    "F208 FRH on Collection Day"
+
+                )
+
+            );
+
+
+            /* PHOTO001 - PHOTO006 */
 
             imageFiles
 
@@ -1496,24 +1401,12 @@
                 );
 
 
-            /* ROAD.JPG AFTER PHOTO006 */
-
-            collectionGallery.appendChild(
-
-                createGalleryImage(
-
-                    "road.JPG",
-
-                    "F208 FRH on Collection Day"
-
-                )
-
-            );
-
-
             /* =====================================================
                EARLY REPAIRS
-               007 - 012
+
+               PHOTO007 IS DELIBERATELY EXCLUDED
+
+               PHOTO008 - PHOTO012
             ===================================================== */
 
             imageFiles
@@ -1521,7 +1414,7 @@
                 .filter(
                     file =>
 
-                        file.photoNumber >= 7 &&
+                        file.photoNumber >= 8 &&
                         file.photoNumber <= 12
                 )
 
@@ -1544,17 +1437,92 @@
                 );
 
 
+            /* PHOTO013 AT THE END OF EARLY REPAIRS */
+
+            const photo13 =
+                imageFiles.find(
+                    file =>
+                        file.photoNumber === 13
+                );
+
+
+            if (
+                photo13
+            ) {
+
+                repairsGallery.appendChild(
+
+                    createGalleryImage(
+
+                        photo13.download_url,
+
+                        "F208 FRH Early Repairs - Photo 13"
+
+                    )
+
+                );
+
+            }
+
+
             /* =====================================================
                LATER YEARS
-               013 ONWARDS
+
+               FORMER HISTORICAL ARCHIVE PHOTOS
             ===================================================== */
+
+            const laterArchivePhotos = [
+
+                {
+                    src: "plate.jpg",
+                    alt: "F208 FRH registration"
+                },
+
+                {
+                    src: "alloys.jpeg",
+                    alt: "Ford Fiesta XR2 alloy wheels"
+                },
+
+                {
+                    src: "Garage.jpeg",
+                    alt: "Ford Fiesta XR2 in garage"
+                },
+
+                {
+                    src: "crystal.JPG",
+                    alt: "Crystal Ford"
+                }
+
+            ];
+
+
+            laterArchivePhotos.forEach(
+                photo => {
+
+                    laterGallery.appendChild(
+
+                        createGalleryImage(
+
+                            photo.src,
+
+                            photo.alt
+
+                        )
+
+                    );
+
+                }
+            );
+
+
+            /* PHOTO014 ONWARDS */
 
             imageFiles
 
                 .filter(
                     file =>
 
-                        file.photoNumber >= 13
+                        file.photoNumber >= 14
                 )
 
                 .forEach(
@@ -1577,7 +1545,7 @@
 
 
             /* =====================================================
-               EMPTY SECTION FALLBACKS
+               EMPTY FALLBACK
             ===================================================== */
 
             if (
@@ -1649,34 +1617,7 @@
 
 
     /* =========================================================
-       STATIC IMAGE LIGHTBOX
-    ========================================================= */
-
-    document
-        .querySelectorAll(
-            ".gallery-item img"
-        )
-        .forEach(
-            image => {
-
-                image.addEventListener(
-                    "click",
-                    () => {
-
-                        openLightbox(
-                            image.src,
-                            image.alt
-                        );
-
-                    }
-                );
-
-            }
-        );
-
-
-    /* =========================================================
-       LOAD NUMBERED PHOTOS
+       START
     ========================================================= */
 
     loadPhotoGallery();
