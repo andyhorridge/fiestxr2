@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
@@ -9,19 +8,35 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="theme-color"
-        content="#050505"
-    >
+    <meta name="theme-color" content="#08090b">
 
-    <title>F208 FRH | Ford Fiesta XR2</title>
+    <title>Ford Fiesta XR2 | F208 FRH → F16 XRT</title>
 
     <meta
         name="description"
-        content="The documented history of F208 FRH, a 1989 Ford Fiesta XR2."
+        content="The documented history of a 1989 Ford Fiesta XR2, originally registered F208 FRH and now becoming F16 XRT."
     >
 
+    <!-- Social / WhatsApp preview -->
+    <meta property="og:title" content="1989 Ford Fiesta XR2">
+    <meta property="og:description" content="The documented history of F208 FRH → F16 XRT">
+    <meta property="og:image" content="hero.jpg">
+    <meta property="og:type" content="website">
+
     <style>
+
+        :root {
+            --ford-blue: #003478;
+            --ford-blue-light: #0067b9;
+            --xr-red: #e21b23;
+            --xr-orange: #ef7d00;
+            --black: #08090b;
+            --panel: #111317;
+            --panel-light: #181b20;
+            --white: #f5f5f5;
+            --grey: #a9adb4;
+            --line: #292d33;
+        }
 
         * {
             box-sizing: border-box;
@@ -33,404 +48,468 @@
 
         body {
             margin: 0;
-
-            background: #050505;
-            color: #f5f5f5;
-
+            background:
+                linear-gradient(
+                    180deg,
+                    #050608 0%,
+                    #0a0b0e 40%,
+                    #08090b 100%
+                );
+            color: var(--white);
             font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
                 Arial,
+                Helvetica,
                 sans-serif;
         }
 
         img {
+            display: block;
             max-width: 100%;
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
 
-
-        /* =========================================================
-           HEADER
-        ========================================================= */
-
-        header {
-            position: fixed;
-
-            top: 0;
-            left: 0;
-            right: 0;
-
-            height: 72px;
-
-            display: flex;
-            align-items: center;
-
-            background: rgba(5, 5, 5, 0.88);
-
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-
-            border-bottom:
-                1px solid
-                rgba(255, 255, 255, 0.08);
-
-            z-index: 1000;
-        }
+        /* --------------------------------
+           NAVIGATION
+        -------------------------------- */
 
         nav {
-            width: 100%;
-            max-width: 1400px;
-
-            margin: auto;
-            padding: 0 32px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            padding: 14px 5%;
+
+            background: rgba(5, 6, 8, 0.95);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid #25282d;
         }
 
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
 
-        /* =========================================================
-           LOGO
-        ========================================================= */
-
-        .logo {
-            font-size: 25px;
-            font-weight: 800;
-
-            letter-spacing: -1px;
+            font-size: 19px;
+            font-weight: 900;
+            letter-spacing: 1px;
         }
 
-        .logo span {
-            color: #d71920;
+        .brand-xr {
+            color: white;
+            background: var(--xr-red);
+
+            padding: 5px 8px;
+
+            transform: skew(-8deg);
         }
 
-
-        /* =========================================================
-           NAVIGATION
-        ========================================================= */
+        .brand span:last-child {
+            color: #d7d9dd;
+        }
 
         .nav-links {
             display: flex;
-            align-items: center;
-
-            gap: 30px;
+            gap: 22px;
         }
 
         .nav-links a {
+            color: #d7d9dd;
+            text-decoration: none;
+
             font-size: 12px;
-            font-weight: 700;
-
+            font-weight: 800;
             letter-spacing: 1.4px;
-
-            color: #d0d0d0;
-
-            transition: 0.25s;
         }
 
         .nav-links a:hover {
-            color: #ffffff;
+            color: white;
         }
 
 
-        /* =========================================================
+        /* --------------------------------
            HERO
-        ========================================================= */
+        -------------------------------- */
 
         .hero {
-            position: relative;
+            min-height: 82vh;
 
-            height: 100vh;
-            min-height: 620px;
+            position: relative;
 
             display: flex;
             align-items: flex-end;
 
-            overflow: hidden;
-        }
-
-        .hero-image {
-            position: absolute;
-
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-            object-position: center;
-
-            transform: scale(1.01);
-        }
-
-        .hero-overlay {
-            position: absolute;
-
-            inset: 0;
-
-            background:
+            background-image:
                 linear-gradient(
-                    to bottom,
-                    rgba(0, 0, 0, 0.12) 25%,
-                    rgba(0, 0, 0, 0.25) 55%,
-                    rgba(0, 0, 0, 0.92) 100%
-                );
+                    180deg,
+                    rgba(0,0,0,0.05) 15%,
+                    rgba(0,0,0,0.30) 55%,
+                    rgba(0,0,0,0.96) 100%
+                ),
+                url("hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            border-bottom: 4px solid var(--xr-red);
         }
 
         .hero-content {
-            position: relative;
-
             width: 100%;
-            max-width: 1400px;
+            max-width: 1200px;
 
-            margin: auto;
-
-            padding:
-                0
-                32px
-                75px;
-
-            z-index: 2;
+            margin: 0 auto;
+            padding: 60px 5%;
         }
 
-        .hero-small {
-            margin-bottom: 10px;
-
-            color: #e0e0e0;
+        .eyebrow {
+            color: #ffffff;
 
             font-size: 13px;
-            font-weight: 600;
-
-            letter-spacing: 3px;
+            font-weight: 800;
+            letter-spacing: 4px;
 
             text-transform: uppercase;
+
+            margin-bottom: 12px;
         }
 
         .hero h1 {
             margin: 0;
 
-            max-width: 850px;
-
-            font-size:
-                clamp(
-                    48px,
-                    8vw,
-                    105px
-                );
-
-            line-height: 0.92;
+            font-size: clamp(44px, 8vw, 100px);
+            line-height: 0.9;
 
             letter-spacing: -4px;
-
-            font-weight: 800;
-        }
-
-        .hero h1 span {
-            color: #d71920;
-        }
-
-        .hero-registration {
-            margin-top: 18px;
-
-            font-size: 21px;
-            font-weight: 500;
-
-            color: #dddddd;
-
-            letter-spacing: 2px;
-        }
-
-
-        /* =========================================================
-           MAIN
-        ========================================================= */
-
-        main {
-            overflow: hidden;
-        }
-
-        section {
-            max-width: 1400px;
-
-            margin: auto;
-
-            padding:
-                105px
-                32px;
-        }
-
-        .section-heading {
-            margin-bottom: 45px;
-        }
-
-        .section-kicker {
-            margin-bottom: 9px;
-
-            font-size: 11px;
-            font-weight: 700;
-
-            letter-spacing: 3px;
-
-            color: #d71920;
 
             text-transform: uppercase;
         }
 
-        .section-heading h2 {
-            margin: 0;
-
-            font-size:
-                clamp(
-                    37px,
-                    5vw,
-                    68px
-                );
-
-            line-height: 1;
-
-            letter-spacing: -2.5px;
+        .hero h1 .fiesta {
+            color: white;
         }
 
-        .section-heading p {
-            max-width: 700px;
+        .hero h1 .xr2 {
+            color: var(--xr-red);
+        }
 
-            margin:
-                22px
-                0
-                0;
+        .hero-subtitle {
+            margin-top: 22px;
+
+            font-size: clamp(16px, 2vw, 21px);
+            color: #dedede;
+
+            max-width: 650px;
+        }
+
+        .plate-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            margin-top: 26px;
+        }
+
+        .plate {
+            background: #f4f4f1;
+            color: #111;
+
+            border: 3px solid #111;
+            border-radius: 4px;
+
+            padding: 8px 17px;
+
+            font-family:
+                "Arial Black",
+                Arial,
+                sans-serif;
+
+            font-size: 21px;
+            letter-spacing: 2px;
+
+            box-shadow:
+                inset 0 0 0 2px #d7d7d2,
+                0 3px 12px rgba(0,0,0,.35);
+        }
+
+        .plate-arrow {
+            color: #888;
+            font-size: 22px;
+        }
+
+        .new-plate {
+            border-color: var(--xr-red);
+        }
+
+
+        /* --------------------------------
+           XR STRIPE
+        -------------------------------- */
+
+        .xr-stripe {
+            height: 7px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--ford-blue) 0 35%,
+                    var(--xr-red) 35% 72%,
+                    var(--xr-orange) 72% 100%
+                );
+        }
+
+
+        /* --------------------------------
+           GENERAL SECTIONS
+        -------------------------------- */
+
+        section {
+            padding: 80px 5%;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            color: var(--xr-red);
+
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin: 0 0 25px;
+
+            font-size: clamp(30px, 5vw, 52px);
+            letter-spacing: -1.5px;
+
+            text-transform: uppercase;
+        }
+
+        .intro {
+            max-width: 850px;
+
+            color: #c8cbd0;
 
             font-size: 18px;
-
-            line-height: 1.65;
-
-            color: #a9a9a9;
+            line-height: 1.75;
         }
 
 
-        /* =========================================================
-           CAR
-        ========================================================= */
+        /* --------------------------------
+           CAR DETAILS
+        -------------------------------- */
 
-        .car-section {
+        .car-details {
+            background: var(--panel);
+        }
+
+        .spec-grid {
             display: grid;
-
             grid-template-columns:
-                1.15fr
-                0.85fr;
+                repeat(auto-fit, minmax(180px, 1fr));
 
-            gap: 80px;
+            gap: 1px;
 
-            align-items: start;
+            background: var(--line);
+
+            border: 1px solid var(--line);
+
+            margin-top: 40px;
         }
 
-        .car-description {
-            font-size: 22px;
-
-            line-height: 1.7;
-
-            color: #d2d2d2;
+        .spec {
+            background: #101216;
+            padding: 25px;
         }
 
-        .car-description p {
-            margin-top: 0;
+        .spec-title {
+            color: #7f858d;
+
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
         }
 
-        .details {
-            border-top:
-                1px solid
-                #272727;
-        }
+        .spec-value {
+            color: white;
 
-        .detail {
-            display: flex;
-
-            justify-content: space-between;
-
-            gap: 30px;
-
-            padding:
-                17px
-                0;
-
-            border-bottom:
-                1px solid
-                #272727;
-        }
-
-        .detail-name {
-            color: #858585;
-        }
-
-        .detail-value {
-            text-align: right;
-
-            font-weight: 600;
+            font-size: 19px;
+            font-weight: 800;
         }
 
 
-        /* =========================================================
-           DIVIDER
-        ========================================================= */
+        /* --------------------------------
+           HISTORY
+        -------------------------------- */
 
-        .divider {
-            max-width: 1400px;
-
-            height: 1px;
-
-            margin: auto;
-
-            background: #1b1b1b;
+        .timeline {
+            margin-top: 45px;
         }
 
+        .timeline-item {
+            position: relative;
 
-        /* =========================================================
-           TIMELINE
-        ========================================================= */
+            display: grid;
+            grid-template-columns: 150px 1fr;
 
-        .timeline-block {
-            margin-top: 80px;
+            gap: 35px;
+
+            padding: 0 0 45px;
+
+            border-left: 2px solid #292c31;
+
+            margin-left: 20px;
         }
 
-        .timeline-block:first-of-type {
-            margin-top: 0;
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            left: -7px;
+            top: 4px;
+
+            width: 12px;
+            height: 12px;
+
+            border-radius: 50%;
+
+            background: var(--xr-red);
+
+            box-shadow: 0 0 0 5px #08090b;
         }
 
-        .timeline-heading {
-            margin-bottom: 25px;
+        .timeline-year {
+            padding-left: 25px;
+
+            color: var(--xr-orange);
+
+            font-size: 21px;
+            font-weight: 900;
         }
 
-        .timeline-heading h3 {
+        .timeline-text h3 {
+            margin: 0 0 10px;
+
+            font-size: 21px;
+        }
+
+        .timeline-text p {
             margin: 0;
 
-            font-size:
-                clamp(
-                    27px,
-                    3vw,
-                    40px
+            color: #b9bdc3;
+
+            line-height: 1.7;
+        }
+
+
+        /* --------------------------------
+           F16 XRT
+        -------------------------------- */
+
+        .registration {
+            background:
+                linear-gradient(
+                    135deg,
+                    #003478,
+                    #001b3e
                 );
 
-            letter-spacing: -1px;
+            border-top: 1px solid #155a9d;
+            border-bottom: 1px solid #155a9d;
         }
 
-        .timeline-line {
-            width: 45px;
-            height: 3px;
+        .registration-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
 
-            margin-top: 12px;
+            gap: 50px;
+            align-items: center;
+        }
 
-            background: #d71920;
+        .registration h2 {
+            margin-bottom: 15px;
+        }
+
+        .registration p {
+            color: #e1e8f1;
+            line-height: 1.7;
+
+            max-width: 650px;
+        }
+
+        .plate-big {
+            justify-self: center;
+
+            background: #f3f3ef;
+            color: #111;
+
+            padding: 18px 28px;
+
+            border: 4px solid #111;
+            border-radius: 5px;
+
+            font-family: "Arial Black", Arial, sans-serif;
+
+            font-size: clamp(27px, 5vw, 48px);
+            letter-spacing: 4px;
+
+            box-shadow: 0 12px 30px rgba(0,0,0,.35);
+        }
+
+        .plate-meaning {
+            margin-top: 22px;
+
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .meaning {
+            background: rgba(255,255,255,.09);
+            border: 1px solid rgba(255,255,255,.15);
+
+            padding: 9px 12px;
+
+            font-size: 13px;
+            font-weight: 700;
         }
 
 
-        /* =========================================================
+        /* --------------------------------
            GALLERY
-        ========================================================= */
+        -------------------------------- */
+
+        .gallery-section {
+            background: #090a0c;
+        }
+
+        .gallery-intro {
+            color: #aeb2b8;
+            line-height: 1.7;
+
+            max-width: 760px;
+
+            margin-bottom: 35px;
+        }
 
         .gallery {
             display: grid;
@@ -438,7 +517,7 @@
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 14px;
+            gap: 12px;
         }
 
         .gallery-item {
@@ -446,91 +525,50 @@
 
             overflow: hidden;
 
-            background: #111;
-
-            cursor: zoom-in;
+            background: #15171a;
 
             aspect-ratio: 4 / 3;
+
+            cursor: pointer;
+
+            border-radius: 3px;
         }
 
         .gallery-item img {
-            display: block;
-
             width: 100%;
             height: 100%;
 
             object-fit: cover;
 
             transition:
-                transform 0.5s ease,
-                opacity 0.3s;
+                transform .35s ease,
+                opacity .35s ease;
         }
 
         .gallery-item:hover img {
             transform: scale(1.035);
-
-            opacity: 0.88;
-        }
-
-        .gallery-item::after {
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            border:
-                1px solid
-                rgba(255, 255, 255, 0.06);
-
-            pointer-events: none;
+            opacity: .88;
         }
 
 
-        /* =========================================================
-           LOADING
-        ========================================================= */
-
-        .gallery-status {
-            grid-column: 1 / -1;
-
-            padding:
-                40px
-                20px;
-
-            text-align: center;
-
-            color: #888;
-
-            font-size: 15px;
-        }
-
-
-        /* =========================================================
+        /* --------------------------------
            LIGHTBOX
-        ========================================================= */
+        -------------------------------- */
 
         .lightbox {
+            display: none;
+
             position: fixed;
+            z-index: 5000;
 
             inset: 0;
 
-            display: none;
+            background: rgba(0,0,0,.95);
 
             align-items: center;
             justify-content: center;
 
-            padding:
-                70px
-                20px
-                30px;
-
-            background:
-                rgba(0, 0, 0, 0.96);
-
-            z-index: 5000;
-
-            cursor: zoom-out;
+            padding: 25px;
         }
 
         .lightbox.active {
@@ -538,129 +576,99 @@
         }
 
         .lightbox img {
-            max-width: 96vw;
-            max-height: 88vh;
+            max-width: 95vw;
+            max-height: 90vh;
 
             object-fit: contain;
-
-            box-shadow:
-                0
-                15px
-                60px
-                rgba(0, 0, 0, 0.65);
         }
 
-        .lightbox-close {
+        .close-lightbox {
             position: absolute;
 
-            top: 20px;
-            right: 28px;
+            top: 18px;
+            right: 24px;
 
-            border: 0;
-
-            background: none;
-
-            color: #ffffff;
+            color: white;
 
             font-size: 38px;
+            font-weight: 300;
 
             cursor: pointer;
         }
 
 
-        /* =========================================================
+        /* --------------------------------
            FOOTER
-        ========================================================= */
+        -------------------------------- */
 
         footer {
-            padding:
-                70px
-                30px;
-
-            border-top:
-                1px solid
-                #1b1b1b;
-
             text-align: center;
 
-            color: #707070;
+            padding: 45px 20px;
+
+            border-top: 1px solid #24272b;
+
+            color: #777d84;
 
             font-size: 13px;
         }
 
-        .footer-logo {
-            margin-bottom: 15px;
-
-            color: #ffffff;
-
-            font-size: 22px;
-            font-weight: 800;
-        }
-
-        .footer-logo span {
-            color: #d71920;
+        .footer-xr {
+            color: var(--xr-red);
+            font-weight: 900;
         }
 
 
-        /* =========================================================
+        /* --------------------------------
            MOBILE
-        ========================================================= */
+        -------------------------------- */
 
-        @media (max-width: 900px) {
-
-            header {
-                height: 64px;
-            }
+        @media (max-width: 800px) {
 
             nav {
-                padding:
-                    0
-                    18px;
-            }
-
-            .logo {
-                font-size: 22px;
+                padding: 12px 18px;
             }
 
             .nav-links {
-                gap: 16px;
-            }
-
-            .nav-links a {
-                font-size: 10px;
-
-                letter-spacing: 1px;
+                display: none;
             }
 
             .hero {
-                min-height: 550px;
+                min-height: 68vh;
+                background-position: center;
             }
 
             .hero-content {
-                padding:
-                    0
-                    20px
-                    55px;
+                padding: 45px 22px;
             }
 
             .hero h1 {
-                letter-spacing: -2.5px;
-            }
-
-            .hero-registration {
-                font-size: 17px;
+                letter-spacing: -2px;
             }
 
             section {
-                padding:
-                    75px
-                    20px;
+                padding: 60px 22px;
             }
 
-            .car-section {
+            .timeline-item {
                 grid-template-columns: 1fr;
+                gap: 8px;
+            }
 
-                gap: 35px;
+            .timeline-year {
+                padding-left: 24px;
+            }
+
+            .timeline-text {
+                padding-left: 24px;
+            }
+
+            .registration-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .plate-big {
+                justify-self: start;
             }
 
             .gallery {
@@ -670,961 +678,836 @@
                 gap: 7px;
             }
 
-            .timeline-block {
-                margin-top: 55px;
-            }
-
         }
 
 
-        @media (max-width: 520px) {
+        @media (max-width: 480px) {
 
-            .nav-links {
-                gap: 12px;
+            .gallery {
+                grid-template-columns: 1fr;
             }
 
-            .nav-links a {
-                font-size: 9px;
-            }
-
-            .hero {
-                height: 82vh;
-            }
-
-            .hero h1 {
-                font-size: 53px;
-            }
-
-            .section-heading {
-                margin-bottom: 28px;
-            }
-
-            .section-heading h2 {
-                font-size: 40px;
-            }
-
-            .section-heading p {
-                font-size: 16px;
-            }
-
-            .car-description {
-                font-size: 18px;
+            .gallery-item {
+                aspect-ratio: 4 / 3;
             }
 
         }
 
     </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<nav>
 
-<header>
+    <div class="brand">
+        <span class="brand-xr">XR2</span>
+        <span>1989</span>
+    </div>
 
-    <nav>
+    <div class="nav-links">
+        <a href="#car">THE CAR</a>
+        <a href="#history">HISTORY</a>
+        <a href="#registration">F16 XRT</a>
+        <a href="#gallery">GALLERY</a>
+    </div>
 
-        <a
-            class="logo"
-            href="#top"
-        >
-            <span>XR</span>2
-        </a>
+</nav>
 
 
-        <div class="nav-links">
+<header class="hero">
 
-            <a href="#car">
-                THE CAR
-            </a>
+    <div class="hero-content">
 
-            <a href="#history">
-                HISTORY
-            </a>
+        <div class="eyebrow">
+            1989 · Ford Fiesta · 1.6 CVH
+        </div>
+
+        <h1>
+            <span class="fiesta">Fiesta</span>
+            <span class="xr2">XR2</span>
+        </h1>
+
+        <div class="hero-subtitle">
+            The documented history of a surviving
+            Mk2 Ford Fiesta XR2 — from its original
+            registration to the present day.
+        </div>
+
+        <div class="plate-row">
+
+            <div class="plate">
+                F208 FRH
+            </div>
+
+            <div class="plate-arrow">
+                →
+            </div>
+
+            <div class="plate new-plate">
+                F16 XRT
+            </div>
 
         </div>
 
-    </nav>
+    </div>
 
 </header>
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+<div class="xr-stripe"></div>
 
-<div
-    class="hero"
-    id="top"
+
+<section
+    class="car-details"
+    id="car"
 >
 
-    <img
-        class="hero-image"
-        src="hero.jpg"
-        alt="F208 FRH Ford Fiesta XR2"
-    >
+    <div class="container">
 
-    <div class="hero-overlay"></div>
-
-
-    <div class="hero-content">
-
-        <div class="hero-small">
-            1989 Ford Fiesta
-        </div>
-
-        <h1>
-            Fiesta <span>XR2</span>
-        </h1>
-
-        <div class="hero-registration">
-            F208 FRH
-        </div>
-
-    </div>
-
-</div>
-
-
-<main>
-
-
-<!-- =========================================================
-     THE CAR
-========================================================= -->
-
-<section id="car">
-
-    <div class="section-heading">
-
-        <div class="section-kicker">
+        <div class="section-label">
             The Car
         </div>
 
         <h2>
-            F208 FRH
+            A Proper Eighties Hot Hatch
         </h2>
 
-    </div>
+        <p class="intro">
+            This site documents the life and history of
+            this particular 1989 Ford Fiesta XR2.
+            Originally registered F208 FRH, the car has
+            survived with an extensive history that
+            stretches back to its original supplying
+            Ford dealer in April 1989.
+        </p>
 
 
-    <div class="car-section">
+        <div class="spec-grid">
 
-
-        <div class="car-description">
-
-            <p>
-                A documented history of F208 FRH,
-                a 1989 Ford Fiesta XR2.
-            </p>
-
-            <p>
-                This site brings together photographs,
-                ownership history and memories of the car
-                from throughout its life.
-            </p>
-
-        </div>
-
-
-        <div class="details">
-
-
-            <div class="detail">
-
-                <span class="detail-name">
-                    Manufacturer
-                </span>
-
-                <span class="detail-value">
-                    Ford
-                </span>
-
+            <div class="spec">
+                <div class="spec-title">Model</div>
+                <div class="spec-value">
+                    Ford Fiesta XR2
+                </div>
             </div>
 
-
-            <div class="detail">
-
-                <span class="detail-name">
-                    Model
-                </span>
-
-                <span class="detail-value">
-                    Fiesta XR2
-                </span>
-
+            <div class="spec">
+                <div class="spec-title">Generation</div>
+                <div class="spec-value">
+                    Mk2
+                </div>
             </div>
 
-
-            <div class="detail">
-
-                <span class="detail-name">
-                    Year
-                </span>
-
-                <span class="detail-value">
+            <div class="spec">
+                <div class="spec-title">Year</div>
+                <div class="spec-value">
                     1989
-                </span>
-
+                </div>
             </div>
 
+            <div class="spec">
+                <div class="spec-title">Engine</div>
+                <div class="spec-value">
+                    1.6 CVH
+                </div>
+            </div>
 
-            <div class="detail">
-
-                <span class="detail-name">
-                    Registration
-                </span>
-
-                <span class="detail-value">
+            <div class="spec">
+                <div class="spec-title">Original Registration</div>
+                <div class="spec-value">
                     F208 FRH
-                </span>
-
+                </div>
             </div>
 
+            <div class="spec">
+                <div class="spec-title">New Registration</div>
+                <div class="spec-value">
+                    F16 XRT
+                </div>
+            </div>
 
         </div>
-
 
     </div>
 
 </section>
 
-
-<div class="divider"></div>
-
-
-<!-- =========================================================
-     HISTORY
-========================================================= -->
 
 <section id="history">
 
-    <div class="section-heading">
+    <div class="container">
 
-        <div class="section-kicker">
-            Archive
+        <div class="section-label">
+            History
         </div>
 
         <h2>
-            Through the years
+            From 1989 To Today
         </h2>
 
-        <p>
-            A photographic record of F208 FRH
-            through the years.
-        </p>
 
-    </div>
+        <div class="timeline">
 
 
-    <!-- =====================================================
-         COLLECTION DAY
-         ROAD.JPG FIRST
-         THEN PHOTO001 - PHOTO006
-    ====================================================== -->
+            <div class="timeline-item">
 
-    <div class="timeline-block">
+                <div class="timeline-year">
+                    1989
+                </div>
 
-        <div class="timeline-heading">
+                <div class="timeline-text">
 
-            <h3>
-                Collection Day
-            </h3>
+                    <h3>
+                        The Beginning
+                    </h3>
 
-            <div class="timeline-line"></div>
+                    <p>
+                        Supplied new by Crystal Ford in Hull
+                        and invoiced on 14 April 1989.
+                        The car was registered F208 FRH.
+                    </p>
 
-        </div>
+                </div>
 
-
-        <div
-            class="gallery"
-            id="collectionGallery"
-        >
-
-            <div class="gallery-status">
-                Loading photographs...
             </div>
 
-        </div>
 
-    </div>
+            <div class="timeline-item">
 
+                <div class="timeline-year">
+                    1989–99
+                </div>
 
-    <!-- =====================================================
-         EARLY REPAIRS
-         PHOTO008 - PHOTO012
-         THEN PHOTO013
-         PHOTO007 EXCLUDED
-    ====================================================== -->
+                <div class="timeline-text">
 
-    <div class="timeline-block">
+                    <h3>
+                        With Its First Owner
+                    </h3>
 
-        <div class="timeline-heading">
+                    <p>
+                        The XR2 remained with its original
+                        owner and was regularly used for
+                        approximately its first ten years.
+                        Surviving MOT certificates help
+                        document its mileage through this
+                        period.
+                    </p>
 
-            <h3>
-                Early Repairs
-            </h3>
+                </div>
 
-            <div class="timeline-line"></div>
-
-        </div>
-
-
-        <div
-            class="gallery"
-            id="repairsGallery"
-        >
-
-            <div class="gallery-status">
-                Loading photographs...
             </div>
 
-        </div>
 
-    </div>
+            <div class="timeline-item">
 
+                <div class="timeline-year">
+                    2000–08
+                </div>
 
-    <!-- =====================================================
-         LATER YEARS
-         STATIC ARCHIVE PHOTOS
-         + PHOTO014 ONWARDS
-    ====================================================== -->
+                <div class="timeline-text">
 
-    <div class="timeline-block">
+                    <h3>
+                        Stored Away
+                    </h3>
 
-        <div class="timeline-heading">
+                    <p>
+                        After around a decade on the road,
+                        the Fiesta was stored in the
+                        original owner's father's garage
+                        for approximately nine to ten years.
+                    </p>
 
-            <h3>
-                Later Years
-            </h3>
+                </div>
 
-            <div class="timeline-line"></div>
-
-        </div>
-
-
-        <div
-            class="gallery"
-            id="laterGallery"
-        >
-
-            <div class="gallery-status">
-                Loading photographs...
             </div>
 
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2009
+                </div>
+
+                <div class="timeline-text">
+
+                    <h3>
+                        Back On The Road
+                    </h3>
+
+                    <p>
+                        The XR2 was recommissioned and
+                        returned to the road. Work included
+                        a major service, oil and filters,
+                        spark plugs, timing belt, wheel
+                        cylinders, shock absorbers,
+                        brake discs and tie-bar bushes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2011
+                </div>
+
+                <div class="timeline-text">
+
+                    <h3>
+                        Offered For Sale
+                    </h3>
+
+                    <p>
+                        After approximately 22 years with
+                        its first owner, the XR2 was
+                        advertised for sale with around
+                        78,562 miles recorded. The advert
+                        described the engine as original
+                        and unmodified.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2014
+                </div>
+
+                <div class="timeline-text">
+
+                    <h3>
+                        Bodywork & Suspension
+                    </h3>
+
+                    <p>
+                        The documented history shows
+                        further work including sill and
+                        rear wheel-arch repairs together
+                        with suspension refurbishment.
+                        Parts included KYB springs and
+                        dampers, bushes and other
+                        suspension components.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2015
+                </div>
+
+                <div class="timeline-text">
+
+                    <h3>
+                        Geometry
+                    </h3>
+
+                    <p>
+                        Following the suspension work,
+                        the Fiesta received four-wheel
+                        alignment, another documented
+                        part of the car's continuing
+                        mechanical history.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    Today
+                </div>
+
+                <div class="timeline-text">
+
+                    <h3>
+                        Still Here
+                    </h3>
+
+                    <p>
+                        More than three decades after
+                        leaving the Ford dealer, the XR2
+                        survives as a remarkably distinctive
+                        example of Ford's classic
+                        eighties hot hatch.
+                    </p>
+
+                </div>
+
+            </div>
+
+
         </div>
 
     </div>
-
 
 </section>
 
 
-</main>
+<section
+    class="registration"
+    id="registration"
+>
+
+    <div class="container registration-inner">
+
+        <div>
+
+            <div class="section-label" style="color:#ffffff;">
+                A New Registration
+            </div>
+
+            <h2>
+                F16 XRT
+            </h2>
+
+            <p>
+                The XR2's historic registration
+                <strong>F208 FRH</strong> remains an
+                important part of its documented past
+                and appears throughout its original
+                invoices and photographs.
+            </p>
+
+            <p>
+                A new registration,
+                <strong>F16 XRT</strong>, has now been
+                purchased and will soon be fitted to
+                the car.
+            </p>
+
+            <div class="plate-meaning">
+
+                <div class="meaning">
+                    F — Ford / F registration
+                </div>
+
+                <div class="meaning">
+                    16 — 1.6
+                </div>
+
+                <div class="meaning">
+                    XRT — XR Two
+                </div>
+
+            </div>
+
+        </div>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+        <div class="plate-big">
+            F16 XRT
+        </div>
 
-<footer>
-
-    <div class="footer-logo">
-        <span>XR</span>2
     </div>
 
-    F208 FRH
-
-</footer>
+</section>
 
 
-<!-- =========================================================
-     LIGHTBOX
-========================================================= -->
+<section
+    class="gallery-section"
+    id="gallery"
+>
+
+    <div class="container">
+
+        <div class="section-label">
+            Photo Archive
+        </div>
+
+        <h2>
+            Through The Years
+        </h2>
+
+        <p class="gallery-intro">
+            Photographs documenting the XR2, its
+            preservation, repairs, mechanical work
+            and life over the years.
+        </p>
+
+
+        <div
+            class="gallery"
+            id="photoGallery"
+        ></div>
+
+    </div>
+
+</section>
+
 
 <div
     class="lightbox"
     id="lightbox"
 >
 
-    <button
-        class="lightbox-close"
-        id="lightboxClose"
-        aria-label="Close image"
+    <span
+        class="close-lightbox"
+        id="closeLightbox"
     >
-        &times;
-    </button>
+        ×
+    </span>
 
     <img
         id="lightboxImage"
-        src=""
-        alt=""
+        alt="Ford Fiesta XR2"
     >
 
 </div>
 
 
+<footer>
+
+    <div>
+        1989 Ford Fiesta
+        <span class="footer-xr">XR2</span>
+    </div>
+
+    <div style="margin-top:8px;">
+        F208 FRH → F16 XRT
+    </div>
+
+</footer>
+
+
 <script>
 
-    /* =========================================================
-       GITHUB SETTINGS
-    ========================================================= */
+/*
+----------------------------------------------------
+XR2 AUTOMATIC NUMBERED PHOTO GALLERY
 
-    const githubOwner =
-        "andyhorridge";
+This looks for numbered images in /photos/
 
-    const githubRepo =
-        "fiestaxr2";
+It accepts:
+photo001.jpg
+photo001.JPG
+photo001.jpeg
+photo001.JPEG
 
-    const photosFolder =
-        "photos";
+It also temporarily supports the accidentally
+named photo0014 - photo0018 files currently
+in the GitHub folder.
+----------------------------------------------------
+*/
 
 
-    /* =========================================================
-       LIGHTBOX
-    ========================================================= */
+const gallery =
+    document.getElementById("photoGallery");
 
-    const lightbox =
-        document.getElementById(
-            "lightbox"
+
+const extensions = [
+    "jpg",
+    "JPG",
+    "jpeg",
+    "JPEG"
+];
+
+
+/*
+How many photo numbers to look for.
+
+You currently have around 21 photographs,
+but leaving this at 150 means you can add
+future numbered photographs without editing
+the HTML.
+*/
+
+const maximumPhotoNumber = 150;
+
+
+/*
+Build possible filenames for a photo number.
+*/
+
+function possibleNames(number) {
+
+    const normalNumber =
+        String(number).padStart(3, "0");
+
+    let names = [];
+
+
+    extensions.forEach(extension => {
+
+        names.push(
+            `photos/photo${normalNumber}.${extension}`
         );
 
-    const lightboxImage =
-        document.getElementById(
-            "lightboxImage"
-        );
-
-    const lightboxClose =
-        document.getElementById(
-            "lightboxClose"
-        );
+    });
 
 
-    function openLightbox(
-        imageSource,
-        imageAlt
-    ) {
+    /*
+    Temporary compatibility with:
+    photo0014
+    photo0015
+    photo0016
+    photo0017
+    photo0018
+    */
 
-        lightboxImage.src =
-            imageSource;
+    if (number >= 14 && number <= 18) {
 
-        lightboxImage.alt =
-            imageAlt;
+        const extraZero =
+            String(number).padStart(4, "0");
 
-        lightbox.classList.add(
-            "active"
-        );
+        extensions.forEach(extension => {
 
-        document.body.style.overflow =
-            "hidden";
+            names.push(
+                `photos/photo${extraZero}.${extension}`
+            );
+
+        });
 
     }
 
 
-    function closeLightbox() {
+    return names;
 
-        lightbox.classList.remove(
-            "active"
-        );
+}
 
-        document.body.style.overflow =
-            "";
+
+/*
+Try each possible filename until
+the browser finds the actual image.
+*/
+
+function loadPhoto(number) {
+
+    const filenames =
+        possibleNames(number);
+
+    let attempt = 0;
+
+
+    function tryNext() {
+
+        if (attempt >= filenames.length) {
+            return;
+        }
+
+
+        const filename =
+            filenames[attempt];
+
+        attempt++;
+
+
+        const testImage =
+            new Image();
+
+
+        testImage.onload = function () {
+
+            addPhoto(
+                filename,
+                number
+            );
+
+        };
+
+
+        testImage.onerror = function () {
+
+            tryNext();
+
+        };
+
+
+        testImage.src = filename;
 
     }
 
 
-    lightbox.addEventListener(
+    tryNext();
+
+}
+
+
+/*
+Add a successfully found photograph
+to the gallery.
+*/
+
+function addPhoto(
+    filename,
+    number
+) {
+
+    const item =
+        document.createElement("div");
+
+    item.className =
+        "gallery-item";
+
+    item.dataset.number =
+        number;
+
+
+    const image =
+        document.createElement("img");
+
+    image.src =
+        filename;
+
+    image.alt =
+        `Ford Fiesta XR2 photo ${number}`;
+
+    image.loading =
+        "lazy";
+
+
+    item.appendChild(image);
+
+
+    item.addEventListener(
         "click",
-        closeLightbox
-    );
+        function () {
 
-
-    lightboxClose.addEventListener(
-        "click",
-        closeLightbox
-    );
-
-
-    lightboxImage.addEventListener(
-        "click",
-        event => {
-
-            event.stopPropagation();
+            openLightbox(filename);
 
         }
     );
 
 
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                event.key === "Escape"
-            ) {
-
-                closeLightbox();
-
-            }
-
-        }
-    );
+    gallery.appendChild(item);
 
 
-    /* =========================================================
-       CREATE GALLERY IMAGE
-    ========================================================= */
+    /*
+    Keep the gallery in numerical order
+    even though different image files may
+    load at different speeds.
+    */
 
-    function createGalleryImage(
-        imageSource,
-        imageAlt
-    ) {
-
-        const galleryItem =
-            document.createElement(
-                "div"
-            );
-
-        galleryItem.className =
-            "gallery-item";
-
-
-        const image =
-            document.createElement(
-                "img"
-            );
-
-        image.src =
-            imageSource;
-
-        image.alt =
-            imageAlt;
-
-        image.loading =
-            "lazy";
-
-
-        image.addEventListener(
-            "click",
-            () => {
-
-                openLightbox(
-                    image.src,
-                    image.alt
-                );
-
-            }
+    const items =
+        Array.from(
+            gallery.children
         );
 
 
-        galleryItem.appendChild(
-            image
-        );
+    items.sort(
+        (a, b) =>
+            Number(a.dataset.number) -
+            Number(b.dataset.number)
+    );
 
-        return galleryItem;
 
-    }
+    items.forEach(item =>
+        gallery.appendChild(item)
+    );
 
+}
 
-    /* =========================================================
-       LOAD PHOTO GALLERY
-    ========================================================= */
 
-    async function loadPhotoGallery() {
+/*
+Search for all numbered photographs.
+*/
 
+for (
+    let number = 1;
+    number <= maximumPhotoNumber;
+    number++
+) {
 
-        const collectionGallery =
-            document.getElementById(
-                "collectionGallery"
-            );
+    loadPhoto(number);
 
+}
 
-        const repairsGallery =
-            document.getElementById(
-                "repairsGallery"
-            );
 
+/*
+----------------------------------------------------
+LIGHTBOX
+----------------------------------------------------
+*/
 
-        const laterGallery =
-            document.getElementById(
-                "laterGallery"
-            );
+const lightbox =
+    document.getElementById("lightbox");
 
+const lightboxImage =
+    document.getElementById("lightboxImage");
 
-        try {
+const closeLightbox =
+    document.getElementById("closeLightbox");
 
 
-            const apiUrl =
-                `https://api.github.com/repos/${githubOwner}/${githubRepo}/contents/${photosFolder}`;
+function openLightbox(filename) {
 
+    lightboxImage.src =
+        filename;
 
-            const response =
-                await fetch(
-                    apiUrl,
-                    {
-                        cache: "no-store"
-                    }
-                );
+    lightbox.classList.add(
+        "active"
+    );
 
+    document.body.style.overflow =
+        "hidden";
 
-            if (
-                !response.ok
-            ) {
+}
 
-                throw new Error(
-                    "Unable to read photos folder."
-                );
 
-            }
+function closePhoto() {
 
+    lightbox.classList.remove(
+        "active"
+    );
 
-            const files =
-                await response.json();
+    document.body.style.overflow =
+        "";
 
+}
 
-            const imageFiles =
-                files
 
-                    .filter(
-                        file => {
+closeLightbox.addEventListener(
+    "click",
+    closePhoto
+);
 
-                            return (
 
-                                file.type === "file" &&
+lightbox.addEventListener(
+    "click",
+    function(event) {
 
-                                /^photo\d+\.(jpg|jpeg|png)$/i.test(
-                                    file.name
-                                )
+        if (event.target === lightbox) {
 
-                            );
-
-                        }
-                    )
-
-
-                    .map(
-                        file => {
-
-                            const numberMatch =
-                                file.name.match(
-                                    /\d+/
-                                );
-
-
-                            return {
-
-                                ...file,
-
-                                photoNumber:
-                                    numberMatch
-                                        ? parseInt(
-                                            numberMatch[0],
-                                            10
-                                        )
-                                        : 0
-
-                            };
-
-                        }
-                    )
-
-
-                    .sort(
-                        (a, b) =>
-
-                            a.photoNumber -
-                            b.photoNumber
-                    );
-
-
-            collectionGallery.innerHTML =
-                "";
-
-            repairsGallery.innerHTML =
-                "";
-
-            laterGallery.innerHTML =
-                "";
-
-
-            /* =====================================================
-               COLLECTION DAY
-
-               ROAD.JPG FIRST
-            ===================================================== */
-
-            collectionGallery.appendChild(
-
-                createGalleryImage(
-
-                    "road.JPG",
-
-                    "F208 FRH on Collection Day"
-
-                )
-
-            );
-
-
-            /* PHOTO001 - PHOTO006 */
-
-            imageFiles
-
-                .filter(
-                    file =>
-
-                        file.photoNumber >= 1 &&
-                        file.photoNumber <= 6
-                )
-
-                .forEach(
-                    file => {
-
-                        collectionGallery.appendChild(
-
-                            createGalleryImage(
-
-                                file.download_url,
-
-                                `F208 FRH Collection Day - Photo ${file.photoNumber}`
-
-                            )
-
-                        );
-
-                    }
-                );
-
-
-            /* =====================================================
-               EARLY REPAIRS
-
-               PHOTO007 IS DELIBERATELY EXCLUDED
-
-               PHOTO008 - PHOTO012
-            ===================================================== */
-
-            imageFiles
-
-                .filter(
-                    file =>
-
-                        file.photoNumber >= 8 &&
-                        file.photoNumber <= 12
-                )
-
-                .forEach(
-                    file => {
-
-                        repairsGallery.appendChild(
-
-                            createGalleryImage(
-
-                                file.download_url,
-
-                                `F208 FRH Early Repairs - Photo ${file.photoNumber}`
-
-                            )
-
-                        );
-
-                    }
-                );
-
-
-            /* PHOTO013 AT THE END OF EARLY REPAIRS */
-
-            const photo13 =
-                imageFiles.find(
-                    file =>
-                        file.photoNumber === 13
-                );
-
-
-            if (
-                photo13
-            ) {
-
-                repairsGallery.appendChild(
-
-                    createGalleryImage(
-
-                        photo13.download_url,
-
-                        "F208 FRH Early Repairs - Photo 13"
-
-                    )
-
-                );
-
-            }
-
-
-            /* =====================================================
-               LATER YEARS
-
-               FORMER HISTORICAL ARCHIVE PHOTOS
-            ===================================================== */
-
-            const laterArchivePhotos = [
-
-                {
-                    src: "plate.jpg",
-                    alt: "F208 FRH registration"
-                },
-
-                {
-                    src: "alloys.jpeg",
-                    alt: "Ford Fiesta XR2 alloy wheels"
-                },
-
-                {
-                    src: "Garage.jpeg",
-                    alt: "Ford Fiesta XR2 in garage"
-                },
-
-                {
-                    src: "crystal.JPG",
-                    alt: "Crystal Ford"
-                }
-
-            ];
-
-
-            laterArchivePhotos.forEach(
-                photo => {
-
-                    laterGallery.appendChild(
-
-                        createGalleryImage(
-
-                            photo.src,
-
-                            photo.alt
-
-                        )
-
-                    );
-
-                }
-            );
-
-
-            /* PHOTO014 ONWARDS */
-
-            imageFiles
-
-                .filter(
-                    file =>
-
-                        file.photoNumber >= 14
-                )
-
-                .forEach(
-                    file => {
-
-                        laterGallery.appendChild(
-
-                            createGalleryImage(
-
-                                file.download_url,
-
-                                `F208 FRH - Photo ${file.photoNumber}`
-
-                            )
-
-                        );
-
-                    }
-                );
-
-
-            /* =====================================================
-               EMPTY FALLBACK
-            ===================================================== */
-
-            if (
-                repairsGallery.children.length === 0
-            ) {
-
-                repairsGallery.innerHTML =
-                    `
-                    <div class="gallery-status">
-                        No photographs in this section yet.
-                    </div>
-                    `;
-
-            }
-
-
-            if (
-                laterGallery.children.length === 0
-            ) {
-
-                laterGallery.innerHTML =
-                    `
-                    <div class="gallery-status">
-                        No photographs in this section yet.
-                    </div>
-                    `;
-
-            }
-
-
-        }
-
-        catch (
-            error
-        ) {
-
-
-            console.error(
-                error
-            );
-
-
-            collectionGallery.innerHTML =
-                `
-                <div class="gallery-status">
-                    The photographs could not be loaded.
-                </div>
-                `;
-
-
-            repairsGallery.innerHTML =
-                `
-                <div class="gallery-status">
-                    The photographs could not be loaded.
-                </div>
-                `;
-
-
-            laterGallery.innerHTML =
-                `
-                <div class="gallery-status">
-                    The photographs could not be loaded.
-                </div>
-                `;
+            closePhoto();
 
         }
 
     }
+);
 
 
-    /* =========================================================
-       START
-    ========================================================= */
+document.addEventListener(
+    "keydown",
+    function(event) {
 
-    loadPhotoGallery();
+        if (event.key === "Escape") {
+
+            closePhoto();
+
+        }
+
+    }
+);
 
 </script>
 
 
 </body>
-
 </html>
